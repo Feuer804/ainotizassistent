@@ -1,0 +1,167 @@
+# Xcode
+#
+# gitignore configuration for Xcode 12+ / Swift projects
+#
+# File created by sam_Xcode правила игнорирования смайликов Git
+
+## User settings
+xcuserdata/
+
+## Xcode 8 and earlier
+xcodeproj/*
+!xcodeproj/project.pbxproj
+!xcodeproj/xcshareddata/
+*.xcuserstate
+
+## Xcode 8 and earlier auto-generated files
+*.moved-aside
+*.xccheckout
+
+## Xcode 8 and later
+*.xcodeproj/xcshareddata/xcschemes/*
+*.xcodeproj/xcuserdata/*.xcuserdatad/
+
+## build directories
+build/
+DerivedData/
+
+## .pbxuser files
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+## temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+## specific project files
+*.xcworkspace
+
+## project settings
+*.xcconfig
+
+## testing
+*.test
+*.tests
+
+## documentation
+*.doc
+*.pdf
+*.rtf
+
+## archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+## compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+## packages
+*.deb
+*.rpm
+
+## node modules
+node_modules/
+
+## macOS
+.AppleDouble
+.LSOverride
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Linux
+*~
+
+## iOS
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.mobileprovision
+
+## profiling
+*.prof
+
+## configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+## package manager
+*.lock
+Package.resolved
+Package.pins
+
+## IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+## custom
+*.key
+*.pem
+*.p12
+*.p8
+*.plist
+
+## Swift Package Manager
+.build/
+Packages/
+
+## Carthage
+Carthage/Build/
+
+## CocoaPods
+Pods/
+
+## Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+## Generated files
+*.hmap
+*.ipa
+*.dSYM
+*.app
+*.app.dSYM
+
+## coverage files
+*.coverage
+*.lcov
+
+## simulation
+.s Simulator/
+
+## other
+*.log
+*.txt
+*.tlog
+*.vscode
