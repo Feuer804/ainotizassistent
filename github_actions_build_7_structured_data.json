@@ -1,0 +1,94 @@
+{
+  "build_analysis": {
+    "repository": "Feuer804/ainotizassistent",
+    "workflow": "Build macOS App",
+    "run_number": 7,
+    "status": "FAILURE",
+    "duration": "1m 3s",
+    "job": {
+      "name": "Build AI Notizassistent",
+      "duration": "49s",
+      "steps": [
+        {
+          "step": 1,
+          "name": "Set up job",
+          "status": "success",
+          "duration": "1s"
+        },
+        {
+          "step": 2,
+          "name": "Checkout Repository",
+          "status": "success",
+          "duration": "2s"
+        },
+        {
+          "step": 3,
+          "name": "Setup Xcode",
+          "status": "success",
+          "duration": "6s"
+        },
+        {
+          "step": 4,
+          "name": "Install Dependencies (falls erforderlich)",
+          "status": "success",
+          "duration": "0s"
+        },
+        {
+          "step": 5,
+          "name": "Build App",
+          "status": "failure",
+          "duration": "37s",
+          "error": {
+            "exit_code": 65,
+            "message": "Process completed with exit code 65"
+          }
+        },
+        {
+          "step": 6,
+          "name": "Locate Built App",
+          "status": "success",
+          "duration": "0s"
+        }
+      ]
+    },
+    "trigger": {
+      "type": "manual",
+      "timestamp": "2025-11-01T18:27:00Z",
+      "user": "Feuer804",
+      "commit_sha": "c910788",
+      "branch": "main"
+    },
+    "annotations": {
+      "errors": 1,
+      "notices": 1,
+      "error_details": "Build App Process completed with exit code 65.",
+      "deprecation_notice": {
+        "message": "The macOS-13 based runner images are being deprecated. Consider switching to macOS-15 (macos-15-intel) or macOS 15 arm64 (macos-latest) instead.",
+        "reference_url": "https://github.com/actions/runner-images/issues/13848"
+      }
+    },
+    "access_limitations": {
+      "detailed_logs_available": false,
+      "reason": "Authentication required",
+      "login_required": true
+    },
+    "recommendations": {
+      "immediate_action": "Switch from macOS-13 to macOS-15 or macOS 15 arm64 runner images",
+      "reference_issue": "https://github.com/actions/runner-images/issues/13848"
+    },
+    "files_generated": [
+      "/workspace/github_actions_build_7_analysis.md",
+      "/workspace/browser/screenshots/github_actions_failed_build_run_7.png",
+      "/workspace/browser/screenshots/github_actions_job_build_steps.png",
+      "/workspace/browser/screenshots/github_actions_annotations_expanded.png",
+      "/workspace/browser/screenshots/github_actions_full_notice_expanded.png",
+      "/workspace/browser/extracted_content/github_actions_run_7_failure_details.json"
+    ],
+    "urls": {
+      "main_run": "https://github.com/Feuer804/ainotizassistent/actions/runs/19000877084",
+      "job_details": "https://github.com/Feuer804/ainotizassistent/actions/runs/19000877084/job/54267403434",
+      "workflow_file": "https://github.com/Feuer804/ainotizassistent/actions/workflows/build-macos.yml",
+      "commit": "https://github.com/Feuer804/ainotizassistent/commit/c910788276171b73326ab004145c284a6a212b0b"
+    }
+  }
+}

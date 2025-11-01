@@ -1,0 +1,28 @@
+📄 Extracted from page: ainotizassistent/.github/workflows/build-macos.yml at main · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/blob/main/.github/workflows/build-macos.yml
+
+Extracted content:
+```json
+{
+  "title": "ainotizassistent/.github/workflows/build-macos.yml at main · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/blob/main/.github/workflows/build-macos.yml",
+  "summary": "name: Build macOS App\non:\n  push:\n    branches: [ main ]\n  pull_request:\n    branches: [ main ]\n  workflow_dispatch: # Ermöglicht manuelles Starten\n\njobs:\n  build:\n    name: Build AI Notizassistent\n    runs-on: macos-13 # macOS Ventura mit Xcode 15\n    steps:\n      - name: Checkout Repository\n        uses: actions/checkout@v4\n\n      - name: Setup Xcode\n        run: |\n          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer\n          xcodebuild -version\n\n      - name: Install Dependencies (falls erforderlich)\n        run: |\n          # Falls Sie CocoaPods oder Swift Package Manager Dependencies haben\n          # pod install (falls Podfile vorhanden)\n          # oder wird automatisch von xcodebuild gemacht\n          echo \"Dependencies check...\"\n\n      - name: Build App\n        run: |\n          cd AINotizassistent\n          xcodebuild clean build \\\n            -project AINotizassistent.xcodeproj \\\n            -scheme AINotizassistent \\\n            -configuration Release \\\n            -derivedDataPath ./DerivedData \\\n            CODE_SIGN_IDENTITY=\"\" \\\n            CODE_SIGNING_REQUIRED=NO \\\n            CODE_SIGNING_ALLOWED=NO\n\n      - name: Locate Built App\n        run: |\n          echo \"Suche nach .app Datei...\"\n          find AINotizassistent/DerivedData -name \"*.app\" -type d\n\n      - name: Create ZIP Archive\n        run: |\n          cd AINotizassistent/DerivedData/Build/Products/Release\n          zip -r AINotizassistent.zip AINotizassistent.app\n          mv AINotizassistent.zip $GITHUB_WORKSPACE/\n\n      - name: Upload App as Artifact\n        uses: actions/upload-artifact@v4\n        with:\n          name: AINotizassistent-macOS\n          path: |\n            AINotizassistent.zip\n            AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app\n          retention-days: 30\n\n      - name: Build Summary\n        run: |\n          echo \"✅ Build erfolgreich abgeschlossen!\"\n          echo \"📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)\"\n          echo \"📍 Download: GitHub Actions → Artifacts → AINotizassistent-macOS\"",
+  "key_points": [
+    "This GitHub Actions workflow (`build-macos.yml`) is triggered on `push` to `main`, `pull_request` to `main`, or manually via `workflow_dispatch`.",
+    "The workflow runs on `macos-13` (macOS Ventura with Xcode 15) and is named 'Build AI Notizassistent'.",
+    "It checks out the repository using `actions/checkout@v4`.",
+    "It sets up Xcode by selecting `Xcode_15.0.app` and prints the Xcode version.",
+    "It includes a placeholder step for installing dependencies (e.g., CocoaPods) if needed, noting that `xcodebuild` might handle SPM automatically.",
+    "The core step builds the 'AINotizassistent' app in 'Release' configuration, disabling code signing, using `xcodebuild clean build`.",
+    "It locates the built `.app` file within the derived data path.",
+    "It creates a ZIP archive of the built `.app` file.",
+    "The workflow uploads the generated `.zip` file and the `.app` bundle as a GitHub Actions artifact named 'AINotizassistent-macOS', with a retention period of 30 days.",
+    "Finally, it prints a build summary indicating successful completion, the size of the zipped app, and instructions for downloading the artifact."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/raw/refs/heads/main/.github/workflows/build-macos.yml",
+    "https://github.com/Feuer804/ainotizassistent/actions/workflows/build-macos.yml"
+  ],
+  "file_name": "build-macos_yml_content.json"
+}
+```

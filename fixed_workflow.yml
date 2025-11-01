@@ -1,0 +1,67 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:   # Erlaubt manuelles Starten
+
+jobs:
+  build:
+    name: Build AI Notizassistent
+    runs-on: macos-latest     # ✅ FIXED: macos-latest statt macos-13
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+    
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+          xcodebuild -version
+    
+      - name: Install Dependencies (falls erforderlich)
+        run: |
+          # Falls Sie CocoaPods oder Swift Package Manager Dependencies haben
+          # pod install (falls Podfile vorhanden)
+          # oder wired automation von xcodebuild gemcraft
+          echo "Dependencies check..."
+    
+      - name: Build App
+        run: |
+          cd AINotizassistent
+          xcodebuild clean build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Release \
+            -derivedDataPath ./DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+    
+      - name: Locate Built App
+        run: |
+          echo "Suche nach .app Datei..."
+          find AINotizassistent/DerivedData -name "*.app" -type d
+    
+      - name: Create ZIP Archive
+        run: |
+          cd AINotizassistent/DerivedData/Build/Products/Release
+          zip -r ../../../AINotizassistent.zip AINotizassistent.app
+          mv ../../../AINotizassistent.zip $GITHUB_WORKSPACE/
+    
+      - name: Upload App as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AINotizassistent-macOS
+          path: |
+            AINotizassistent.zip
+            AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app
+          retention-days: 30
+    
+      - name: Build Summary
+        run: |
+          echo "🎉 Build erfolgreich abgeschlossen!"
+          echo "📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)"
+          echo "📥 Download: GitHub Actions 4 Artifacts 4 AINotizassistent-macOS"

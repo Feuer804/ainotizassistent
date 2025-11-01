@@ -1,0 +1,5 @@
+2025/11/01-18:29:09.998 3de Creating DB /workspace/browser/user_data/Default/Local Storage/leveldb since it was missing.
+2025/11/01-18:29:10.042 3de Reusing MANIFEST /workspace/browser/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2025/11/01-18:43:42.627 3df Level-0 table #5: started
+2025/11/01-18:43:42.648 3df Level-0 table #5: 18620 bytes OK
+2025/11/01-18:43:42.655 3df Delete type=0 #3

@@ -1,0 +1,30 @@
+📄 Extracted from page: 
+URL: https://raw.githubusercontent.com/Feuer804/ainotizassistent/main/.github/workflows/build-macos.yml
+
+Extracted content:
+```json
+{
+  "title": "Page Title",
+  "url": "https://raw.githubusercontent.com/Feuer804/ainotizassistent/main/.github/workflows/build-macos.yml",
+  "summary": "This GitHub Actions workflow is designed to build a macOS application named 'AI Notizassistent'. It triggers on pushes and pull requests to the 'main' branch, as well as manually via `workflow_dispatch`. The build process runs on a `macos-13` runner, checks out the repository, configures Xcode 15, builds the application in Release configuration without code signing, zips the resulting `.app` file, and uploads both the `.zip` and `.app` files as a build artifact named 'AINotizassistent-macOS'. A summary is provided at the end indicating success and download location.",
+  "key_points": [
+    "**Workflow Name**: 'Build macOS App'.",
+    "**Triggers**: `push` to `main` branch, `pull_request` to `main` branch, and `workflow_dispatch` (manual trigger).",
+    "**Job Name**: 'Build AI Notizassistent'.",
+    "**Runner Environment**: `macos-13` (macOS Ventura with Xcode 15).",
+    "**Steps Include**:",
+    "  - Checking out the repository using `actions/checkout@v4`.",
+    "  - Setting Xcode version to 15.0.",
+    "  - Placeholder for dependency installation (e.g., CocoaPods or Swift Package Manager).",
+    "  - Building the 'AINotizassistent' project using `xcodebuild` in Release configuration, explicitly disabling code signing (`CODE_SIGN_IDENTITY=\"\"`, `CODE_SIGNING_REQUIRED=NO`, `CODE_SIGNING_ALLOWED=NO`).",
+    "  - Locating the built `.app` file.",
+    "  - Creating a ZIP archive of the `.app` file.",
+    "  - Uploading the `.zip` and `.app` files as a GitHub Artifact named 'AINotizassistent-macOS' with a retention period of 30 days.",
+    "  - Providing a build summary with success confirmation, app size, and artifact download instructions."
+  ],
+  "relevant_links": [
+    "https://raw.githubusercontent.com/Feuer804/ainotizassistent/main/.github/workflows/build-macos.yml"
+  ],
+  "file_name": "github_workflow_build_macos.json"
+}
+```

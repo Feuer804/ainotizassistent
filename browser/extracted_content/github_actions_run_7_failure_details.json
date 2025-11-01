@@ -1,0 +1,33 @@
+📄 Extracted from page: Build macOS App · Feuer804/ainotizassistent@c910788 · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/actions/runs/19000877084
+
+Extracted content:
+```json
+{
+  "title": "Build macOS App · Feuer804/ainotizassistent@c910788 · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/actions/runs/19000877084",
+  "summary": "Der GitHub Actions Workflow 'Build macOS App' (Run #7) im Repository Feuer804/ainotizassistent ist fehlgeschlagen. Der Build wurde manuell am 1. November 2025 um 18:27 Uhr vom Benutzer Feuer804 für den Commit c910788 auf dem `main`-Branch ausgelöst. Der einzige Job 'Build AI Notizassistent' lief 49 Sekunden und endete mit dem Exit Code 65. Eine zusätzliche Anmerkung weist darauf hin, dass die macOS-13 Runner-Images veraltet sind und ein Wechsel zu macOS-15 empfohlen wird.",
+  "key_points": [
+    "Workflow Name: Build macOS App",
+    "Run Nummer: #7",
+    "Repository: Feuer804/ainotizassistent",
+    "Status: Fehlgeschlagen (Failure)",
+    "Trigger-Typ: Manuell ausgelöst (Manually triggered)",
+    "Trigger-Datum/-Uhrzeit: 1. November 2025, 18:27 Uhr",
+    "Ausgelöst von: Feuer804",
+    "Commit SHA: c910788",
+    "Branch: main",
+    "Gesamtdauer: 1m 3s",
+    "Job: Build AI Notizassistent (Dauer: 49s)",
+    "Fehlermeldung (Job): Process completed with exit code 65.",
+    "Diagnosehinweis (Runner): macOS-13 Runner-Images werden eingestellt; Wechsel zu macOS-15 (macos-15-intel) oder macOS 15 arm64 (macos-latest) wird empfohlen."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/actions/workflows/build-macos.yml",
+    "https://github.com/Feuer804/ainotizassistent/actions/runs/19000877084/job/54267403434",
+    "https://github.com/Feuer804/ainotizassistent/commit/c910788276171b73326ab004145c284a6a212b0b",
+    "https://github.com/actions/runner-images/issues/13046"
+  ],
+  "file_name": "github_actions_run_7_failure_details.json"
+}
+```
