@@ -1,0 +1,23 @@
+📄 Extracted from page: runner-images/images/macos/macos-13-Readme.md at main · actions/runner-images · GitHub
+URL: https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md
+
+Extracted content:
+```json
+{
+  "title": "runner-images/images/macos/macos-13-Readme.md at main · actions/runner-images · GitHub",
+  "url": "https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md",
+  "summary": "Diese Seite beschreibt die Details des macOS 13 (Ventura) Runner-Images, das von GitHub Actions verwendet wird. Sie enthält Informationen zur genauen OS- und Kernel-Version, der Image-Version sowie eine detaillierte Liste aller installierten Software, Sprachen, Runtimes, Paketmanager, Tools und insbesondere der verfügbaren Xcode-Versionen. Zusätzlich werden wichtige Ankündigungen zu bevorstehenden Änderungen und Updates des Images aufgeführt.",
+  "key_points": [
+    "Das Runner-Image basiert auf macOS 13, das als macOS 13 Ventura bekannt ist. Die spezifische OS-Version ist macOS 13.7.6 (22H625).",
+    "Die aktuelle Image-Versionsnummer ist 20250908.1476.",
+    "Die verfügbaren Xcode-Versionen sind: 15.2 (Standard), 15.1, 15.0.1, 14.3.1, 14.2 und 14.1.",
+    "Wichtige Ankündigungen umfassen ein Cmake-Update auf Version 4.* am 8. September, die Veralterung von 4 Tools am 3. November und die Umstellung des 'macos-latest' YAML-Labels auf macOS 15 im August 2025."
+  ],
+  "relevant_links": [
+    "https://github.com/actions/runner-images/issues/12934",
+    "https://github.com/actions/runner-images/issues/12873",
+    "https://github.com/actions/runner-images/issues/12520"
+  ],
+  "file_name": "macos_13_runner_image_details.json"
+}
+```

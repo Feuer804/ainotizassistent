@@ -1,0 +1,25 @@
+📄 Extracted from page: GitHub-hosted runners - GitHub Docs
+URL: https://docs.github.com/en/actions/concepts/runners/github-hosted-runners
+
+Extracted content:
+```json
+{
+  "title": "GitHub-hosted runners - GitHub Docs",
+  "url": "https://docs.github.com/en/actions/concepts/runners/github-hosted-runners",
+  "summary": "This page provides an overview of GitHub-hosted runners, including that they are virtual machines available with Ubuntu Linux, Windows, or macOS operating systems. For details on specific runner images, such as available macOS versions and their preinstalled software, the page explicitly directs users to the `actions/runner-images` GitHub repository. The content indicates that runner images are updated weekly and that workflow logs provide a link to the exact preinstalled tools for the runner used. However, this page itself does not list the specific macOS versions, confirm the availability of `macos-13` or specific macOS 13 Ventura versions, or detail any deprecated macOS versions.",
+  "key_points": [
+    "GitHub-hosted runners are available for macOS operating systems.",
+    "The detailed list of available macOS runner images and their preinstalled software is maintained in the `actions/runner-images` GitHub repository.",
+    "Runner images, including macOS, are updated weekly.",
+    "Workflow logs provide a direct link to the list of preinstalled tools on the specific runner that executed a workflow.",
+    "To request new tools or view announcements about major software updates, users should refer to the `actions/runner-images` repository.",
+    "This documentation page does not directly state which macOS versions are currently supported, if `macos-13` is available, if there are specific macOS 13 Ventura versions, or which macOS versions are deprecated. This information must be obtained from the linked `actions/runner-images` repository."
+  ],
+  "relevant_links": [
+    "https://github.com/actions/runner-images",
+    "https://github.com/actions/partner-runner-images",
+    "/en/actions/monitoring-and-troubleshooting-workflows/viewing-workflow-run-history"
+  ],
+  "file_name": "github_hosted_runners_macos_versions.json"
+}
+```

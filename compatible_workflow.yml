@@ -1,0 +1,87 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:   # Erlaubt manuelles Starten
+
+jobs:
+  build:
+    name: Build AI Notizassistent
+    runs-on: macos-13     # ✅ COMPATIBLE: macos-13 Ventura für Intel/Apple Silicon
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+    
+      - name: Setup Xcode (mit Ventura kompatibler Version)
+        run: |
+          echo "Verwende macOS 13 mit Xcode 15.2"
+          xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+          echo "Xcode-select Pfad: $(xcode-select -p)"
+    
+      - name: Install Dependencies (falls erforderlich)
+        run: |
+          echo "Prüfe auf Dependencies..."
+          # Falls Sie CocoaPods verwenden
+          if [ -f "AINotizassistent/Podfile" ]; then
+            echo "CocoaPods gefunden, führe pod install aus..."
+            cd AINotizassistent
+            pod install
+          fi
+          echo "Dependencies check abgeschlossen."
+    
+      - name: Build App (Ventura kompatible Einstellungen)
+        run: |
+          cd AINotizassistent
+          echo "Lösche vorherige Builds..."
+          xcodebuild clean
+          
+          echo "Baue App mit Ventura kompatiblen Einstellungen..."
+          xcodebuild build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Release \
+            -derivedDataPath ./DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            -verbose
+    
+      - name: Locate Built App
+        run: |
+          echo "Suche nach gebauter .app Datei..."
+          find AINotizassistent/DerivedData -name "*.app" -type d
+          ls -la AINotizassistent/DerivedData/Build/Products/Release/ 2>/dev/null || echo "Noch nicht gefunden, prüfe weitere Pfade..."
+    
+      - name: Create ZIP Archive
+        run: |
+          echo "Erstelle ZIP-Archiv der App..."
+          cd AINotizassistent/DerivedData/Build/Products/Release
+          if [ -d "AINotizassistent.app" ]; then
+            zip -r ../../../AINotizassistent.zip AINotizassistent.app
+            echo "ZIP-Archiv erstellt: $(ls -lah ../../../AINotizassistent.zip)"
+          else
+            echo "Fehler: AINotizassistent.app nicht gefunden!"
+            ls -la
+            exit 1
+          fi
+    
+      - name: Upload App as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AINotizassistent-macOS-Ventura
+          path: |
+            AINotizassistent.zip
+            AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app
+          retention-days: 30
+    
+      - name: Build Summary
+        run: |
+          echo "🎉 Build erfolgreich abgeschlossen!"
+          echo "📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)"
+          echo "🔧 Runner: macOS 13 (Ventura-kompatibel)"
+          echo "📥 Download: GitHub Actions → Artifacts → AINotizassistent-macOS-Ventura"

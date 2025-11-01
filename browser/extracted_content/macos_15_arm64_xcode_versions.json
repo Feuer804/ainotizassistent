@@ -1,0 +1,64 @@
+📄 Extracted from page: runner-images/images/macos/macos-15-arm64-Readme.md at main · actions/runner-images · GitHub
+URL: https://github.com/actions/runner-images/blob/main/images/macos/macos-15-arm64-Readme.md
+
+Extracted content:
+```json
+{
+  "title": "runner-images/images/macos/macos-15-arm64-Readme.md at main · actions/runner-images · GitHub",
+  "url": "https://github.com/actions/runner-images/blob/main/images/macos/macos-15-arm64-Readme.md",
+  "summary": "Diese Seite listet die Spezifikationen und installierte Software für die macOS 15 arm64 Runner-Images auf, die in GitHub Actions verwendet werden. Sie enthält Details zu Betriebssystemversion, Kernel, Image-Version, sowie installierten Sprachen, Runtimes, Paketverwaltungs-Tools, Projektmanagement-Tools, Dienstprogrammen, Browsern und Entwicklungstools wie Xcode, Android SDK, Java, Ruby, Python, Node.js, Go und Rust.",
+  "key_points": [
+    "macOS 15.7.1 (24G231) arm64 Runner-Spezifikationen.",
+    "Liste der installierten Software, einschließlich Sprachen, Laufzeiten und Entwicklungstools.",
+    "Detaillierte Tabelle der verfügbaren Xcode-Versionen.",
+    "Informationen zu installierten SDKs und Simulatoren für iOS, tvOS, watchOS, visionOS und DriverKit.",
+    "Liste der installierten Android SDK-Komponenten und zugehörige Umgebungsvariablen."
+  ],
+  "relevant_links": [],
+  "xcode_versions": [
+    {
+      "Version": "26.1 (beta)",
+      "Build": "17B5045g",
+      "Path": "/Applications/Xcode_26.1_beta_3.app",
+      "Symlinks": "/Applications/Xcode_26.1.0.app/Applications/Xcode_26.1.app"
+    },
+    {
+      "Version": "26.0.1",
+      "Build": "17A400",
+      "Path": "/Applications/Xcode_26.0.1.app",
+      "Symlinks": "/Applications/Xcode_26.0.app"
+    },
+    {
+      "Version": "16.4 (default)",
+      "Build": "16F6",
+      "Path": "/Applications/Xcode_16.4.app",
+      "Symlinks": "/Applications/Xcode_16.4.0.app/Applications/Xcode.app"
+    },
+    {
+      "Version": "16.3",
+      "Build": "16E140",
+      "Path": "/Applications/Xcode_16.3.app",
+      "Symlinks": "/Applications/Xcode_16.3.0.app"
+    },
+    {
+      "Version": "16.2",
+      "Build": "16C5032a",
+      "Path": "/Applications/Xcode_16.2.app",
+      "Symlinks": "/Applications/Xcode_16.2.0.app"
+    },
+    {
+      "Version": "16.1",
+      "Build": "16B40",
+      "Path": "/Applications/Xcode_16.1.app",
+      "Symlinks": "/Applications/Xcode_16.1.0.app"
+    },
+    {
+      "Version": "16.0",
+      "Build": "16A242d",
+      "Path": "/Applications/Xcode_16.app",
+      "Symlinks": "/Applications/Xcode_16.0.0.app/Applications/Xcode_16.0.app"
+    }
+  ],
+  "file_name": "macos_15_arm64_xcode_versions.json"
+}
+```

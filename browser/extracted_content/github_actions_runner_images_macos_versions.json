@@ -1,0 +1,37 @@
+📄 Extracted from page: GitHub - actions/runner-images: GitHub Actions runner images
+URL: https://github.com/actions/runner-images
+
+Extracted content:
+```json
+{
+  "title": "GitHub - actions/runner-images: GitHub Actions runner images",
+  "url": "https://github.com/actions/runner-images",
+  "summary": "Die GitHub Actions runner-images Seite listet die verfügbaren VM-Images für GitHub-gehostete Runner auf, einschließlich Ubuntu, macOS und Windows Server. Die Seite beschreibt auch die Image-Definitionen (Beta vs. GA), den Freigabeprozess, die Support-Richtlinien für Software und Images sowie die Deprecationsrichtlinien. Es werden auch Details zur Standard-Versionsaktualisierung und zur Interaktion mit dem Repository gegeben.",
+  "key_points": [
+    "Die 'Available Images' Tabelle listet die aktuell verfügbaren Runner-Images auf.",
+    "Folgende macOS-Runner-Versionen sind aufgeführt:",
+    "- macOS 26 Arm64 `beta` (YAML Label: `macos-26`, `macos-26-xlarge`)",
+    "- macOS 15 (YAML Label: `macos-latest-large`, `macos-15-large`, `macos-15-intel`)",
+    "- macOS 15 Arm64 (YAML Label: `macos-latest`, `macos-15`, `macos-15-xlarge`)",
+    "- macOS 14 (YAML Label: `macos-14-large`)",
+    "- macOS 14 Arm64 (YAML Label: `macos-14`, `macos-14-xlarge`)",
+    "- macOS 13 (YAML Label: `macos-13`, `macos-13-large`)",
+    "- macOS 13 Arm64 (YAML Label: `macos-13-xlarge`)",
+    "macOS 13 ist noch in der 'Available Images' Tabelle gelistet und somit verfügbar.",
+    "Es gibt keine explizite Anmerkung in der Tabelle, dass macOS 13 (Ventura) deprecated oder entfernt wurde. Die Deprecation Policy besagt jedoch, dass nur die neuesten 2 GA-Versionen und 1 Beta-Version unterstützt werden. Da macOS 15 die aktuelle 'latest' Version ist, ist macOS 13 die älteste der drei gelisteten GA-Versionen (13, 14, 15) und wäre somit die nächste Version, die bei der Veröffentlichung einer neuen GA-Version zur Deprecation anstünde."
+  ],
+  "relevant_links": [
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-15-arm64-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-14-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md",
+    "https://github.com/actions/runner-images/blob/main/images/macos/macos-13-arm64-Readme.md",
+    "https://github.com/actions/runner-images/labels/Announcement",
+    "https://github.com/actions/runner-images/releases",
+    "https://github.com/actions/runner-images/labels/awaiting-deployment"
+  ],
+  "file_name": "github_actions_runner_images_macos_versions.json"
+}
+```

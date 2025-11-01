@@ -1,0 +1,24 @@
+📄 Extracted from page: runner-images/images/macos/scripts/docs-gen/SoftwareReport.Xcode.psm1 at main · actions/runner-images · GitHub
+URL: https://github.com/actions/runner-images/blob/main/images/macos/scripts/docs-gen/SoftwareReport.Xcode.psm1
+
+Extracted content:
+```json
+{
+  "title": "runner-images/images/macos/scripts/docs-gen/SoftwareReport.Xcode.psm1 at main · actions/runner-images · GitHub",
+  "url": "https://github.com/actions/runner-images/blob/main/images/macos/scripts/docs-gen/SoftwareReport.Xcode.psm1",
+  "summary": "Das Skript `SoftwareReport.Xcode.psm1` ist ein PowerShell-Modul, das entwickelt wurde, um detaillierte Informationen über alle auf einem macOS-Runner installierten Xcode-Versionen, SDKs und Simulatoren zu sammeln und zu formatieren. Es durchsucht den `/Applications`-Ordner nach Xcode-Installationen, extrahiert Versions-, Build- und Pfaddaten und identifiziert, ob eine Xcode-Installation die Standardversion oder eine Beta-Version ist. Darüber hinaus listet es alle verfügbaren SDKs und die zugehörigen Xcode-Versionen sowie alle installierten Simulatoren mit ihren Betriebssystemversionen auf. Das Hauptziel des Skripts ist die Generierung eines Softwareberichts für GitHub Actions Runner-Images.",
+  "key_points": [
+    "Das Skript importiert Hilfsmodule `Common.Helpers.psm1` und `Xcode.Helpers.psm1` zur Unterstützung bei der Befehlsausführung und Xcode-bezogenen Funktionen.",
+    "Die Funktion `Get-XcodePaths` findet alle Xcode-Installationen im Verzeichnis `/Applications`, die dem Muster `Xcode_*.app` folgen und keine symbolischen Links sind.",
+    "Die Funktion `Get-XcodeSDKList` ruft die Liste der SDKs für eine bestimmte Xcode-Installation ab, entweder durch Parsen der Ausgabe von `xcodebuild -showsdks` für ältere Xcode-Versionen (<= 9.4.1) oder `xcodebuild -showsdks -json` für neuere Versionen.",
+    "Die zentrale Funktion `Get-XcodeInfoList` sammelt umfassende Informationen für jede gefundene Xcode-Installation, einschließlich Version (`VersionInfo`), zugehörige SDKs (`SDKInfo`) und Simulatorinformationen (`SimulatorsInfo`). Sie identifiziert auch die Standard-Xcode-Installation und ob eine Version stabil oder eine Beta ist.",
+    "Die Funktion `Get-XcodePlatformOrder` definiert eine Sortierreihenfolge für verschiedene Apple-Plattformen (macOS, iOS, tvOS, watchOS, visionOS und deren Simulatoren).",
+    "Die Funktion `Build-XcodeTable` generiert eine Tabelle der Xcode-Installationen, die deren Version (mit Kennzeichnung als 'default' oder 'beta'), Build-Nummer, Installationspfad und alle zugehörigen Symlinks enthält.",
+    "Die Funktion `Build-XcodeSDKTable` erstellt eine Tabelle, die alle gefundenen SDKs (z.B. 'iOS 17.0') mit den Xcode-Versionen auflistet, die dieses SDK unterstützen.",
+    "Die Funktion `Build-XcodeSimulatorsTable` erstellt eine Tabelle der installierten Simulatoren, die deren Namen, OS-Version und eine Liste der spezifischen Simulatoren (z.B. 'iPhone 15 Pro') zusammenfasst.",
+    "**Bezug zu macOS 15 (macos-latest):** Das Skript ist ein **Berichtstool**, das auf einem GitHub Actions Runner ausgeführt wird. Wenn es auf einem `macos-latest` Runner (der typischerweise macOS 15 entspricht) ausgeführt wird, würde es alle *auf diesem spezifischen Runner* installierten Xcode-Versionen, SDKs und Simulatoren identifizieren und berichten. Das Skript selbst *enthält keine fest kodierte Liste* von Xcode-Versionen für macOS 15, sondern beschreibt den Mechanismus, diese dynamisch auf dem Host-System zu ermitteln."
+  ],
+  "relevant_links": [],
+  "file_name": "SoftwareReport.Xcode.psm1.json"
+}
+```
