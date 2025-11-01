@@ -1,0 +1,100 @@
+📄 Extracted from page: ainotizassistent/.github/workflows/build-macos.yml at main · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/blob/main/.github/workflows/build-macos.yml
+
+Extracted content:
+```json
+{
+  "title": "ainotizassistent/.github/workflows/build-macos.yml at main · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/blob/main/.github/workflows/build-macos.yml",
+  "summary": "This GitHub Actions workflow, named 'Build macOS App', is designed to build a macOS application named 'AI Notizassistent'. It triggers on pushes to the `main` branch, pull requests targeting `main`, or can be manually dispatched. The workflow runs on a `macos-13` runner (macOS Ventura with Xcode 15) and includes steps to check out the repository, set up Xcode, build the application, create a ZIP archive of the compiled app, and upload it as a build artifact for 30 days. It explicitly disables code signing for the build process.",
+  "key_points": [
+    {
+      "workflow_name": "Build macOS App"
+    },
+    {
+      "triggers": [
+        "push to main branch",
+        "pull_request to main branch",
+        "workflow_dispatch (manual trigger)"
+      ]
+    },
+    {
+      "job_name": "build",
+      "runs-on": "macos-13 # macOS Ventura mit Xcode 15",
+      "steps": [
+        {
+          "name": "Checkout Repository",
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "name": "Setup Xcode",
+          "run_commands": [
+            "sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer",
+            "xcodebuild -version"
+          ]
+        },
+        {
+          "name": "Install Dependencies (falls erforderlich)",
+          "description": "Placeholder for CocoaPods/Swift Package Manager dependencies; currently just echoes 'Dependencies check...'"
+        },
+        {
+          "name": "Build App",
+          "run_commands": [
+            "cd AINotizassistent",
+            "xcodebuild clean build \\",
+            "-project AINotizassistent.xcodeproj \\",
+            "-scheme AINotizassistent \\",
+            "-configuration Release \\",
+            "-derivedDataPath ./DerivedData \\",
+            "CODE_SIGN_IDENTITY=\"\" \\",
+            "CODE_SIGNING_REQUIRED=NO \\",
+            "CODE_SIGNING_ALLOWED=NO"
+          ],
+          "configuration_details": "Builds the 'AINotizassistent' scheme in Release configuration, disables code signing."
+        },
+        {
+          "name": "Locate Built App",
+          "run_commands": [
+            "echo \"Suche nach .app Datei...\"",
+            "find AINotizassistent/DerivedData -name \"*.app\" -type d"
+          ]
+        },
+        {
+          "name": "Create ZIP Archive",
+          "run_commands": [
+            "cd AINotizassistent/DerivedData/Build/Products/Release",
+            "zip -r AINotizassistent.zip AINotizassistent.app",
+            "mv AINotizassistent.zip $GITHUB_WORKSPACE/"
+          ]
+        },
+        {
+          "name": "Upload App as Artifact",
+          "uses": "actions/upload-artifact@v4",
+          "with": {
+            "name": "AINotizassistent-macOS",
+            "path": [
+              "AINotizassistent.zip",
+              "AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app"
+            ],
+            "retention-days": 30
+          }
+        },
+        {
+          "name": "Build Summary",
+          "run_commands": [
+            "echo \"✅ Build erfolgreich abgeschlossen!\"",
+            "echo \"📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)\"",
+            "echo \"📍 Download: GitHub Actions → Artifacts → AINotizassistent-macOS\""
+          ]
+        }
+      ]
+    }
+  ],
+  "relevant_links": [
+    "https://github.com/actions/checkout@v4",
+    "https://github.com/actions/upload-artifact@v4"
+  ],
+  "file_name": "build_macos_workflow.json",
+  "full_yaml_content": "name: Build macOS App\non:\n  push:\n    branches: [ main ]\n  pull_request:\n    branches: [ main ]\n  workflow_dispatch: # Ermöglicht manuelles Starten\njobs:\n  build:\n    name: Build AI Notizassistent\n    runs-on: macos-13 # macOS Ventura mit Xcode 15\n    steps:\n      - name: Checkout Repository\n        uses: actions/checkout@v4\n\n      - name: Setup Xcode\n        run: |\n          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer\n          xcodebuild -version\n\n      - name: Install Dependencies (falls erforderlich)\n        run: |\n          # Falls Sie CocoaPods oder Swift Package Manager Dependencies haben\n          # pod install (falls Podfile vorhanden)\n          # oder wird automatisch von xcodebuild gemacht\n          echo \"Dependencies check...\"\n\n      - name: Build App\n        run: |\n          cd AINotizassistent\n          xcodebuild clean build \\\n            -project AINotizassistent.xcodeproj \\\n            -scheme AINotizassistent \\\n            -configuration Release \\\n            -derivedDataPath ./DerivedData \\\n            CODE_SIGN_IDENTITY=\"\" \\\n            CODE_SIGNING_REQUIRED=NO \\\n            CODE_SIGNING_ALLOWED=NO\n\n      - name: Locate Built App\n        run: |\n          echo \"Suche nach .app Datei...\"\n          find AINotizassistent/DerivedData -name \"*.app\" -type d\n\n      - name: Create ZIP Archive\n        run: |\n          cd AINotizassistent/DerivedData/Build/Products/Release\n          zip -r AINotizassistent.zip AINotizassistent.app\n          mv AINotizassistent.zip $GITHUB_WORKSPACE/\n\n      - name: Upload App as Artifact\n        uses: actions/upload-artifact@v4\n        with:\n          name: AINotizassistent-macOS\n          path: |\n            AINotizassistent.zip\n            AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app\n          retention-days: 30\n\n      - name: Build Summary\n        run: |\n          echo \"✅ Build erfolgreich abgeschlossen!\"\n          echo \"📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)\"\n          echo \"📍 Download: GitHub Actions → Artifacts → AINotizassistent-macOS\""
+}
+```

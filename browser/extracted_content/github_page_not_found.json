@@ -1,0 +1,28 @@
+📄 Extracted from page: Page not found · GitHub · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/actions/runs
+
+Extracted content:
+```json
+{
+  "title": "Page not found · GitHub · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/actions/runs",
+  "summary": "Die angegebene Seite ist eine \"Page not found\" (Seite nicht gefunden) Fehlermeldung von GitHub. Sie enthält keine Informationen zu Workflow-Runs, Run IDs, Status oder Fehlermeldungen, die für die Extraktionsaufgabe relevant wären. Der Inhalt besteht hauptsächlich aus der Fehlermeldung selbst, Navigationsmenüs, Anmeldeoptionen und allgemeinen GitHub-Fußzeilenlinks.",
+  "key_points": [
+    "Die Seite gibt einen \"Page not found\" Fehler zurück.",
+    "Es sind keine Workflow-Runs oder zugehörige Details vorhanden.",
+    "Die Seite zeigt allgemeine GitHub-Navigations-, Such-, Anmelde- und Fußzeilenelemente.",
+    "Die spezifische Anforderung bezüglich Runs nach ID 19001564301 kann aufgrund des fehlenden Inhalts nicht erfüllt werden."
+  ],
+  "relevant_links": [
+    "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FFeuer804%2Fainotizassistent%2Factions%2Fruns",
+    "https://github.com/features/copilot",
+    "https://github.com/features/actions",
+    "https://docs.github.com",
+    "https://github.com/marketplace",
+    "https://github.com/pricing",
+    "https://support.github.com?tags=dotcom-404",
+    "https://githubstatus.com"
+  ],
+  "file_name": "github_page_not_found.json"
+}
+```

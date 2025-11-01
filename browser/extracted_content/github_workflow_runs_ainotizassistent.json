@@ -1,0 +1,202 @@
+📄 Extracted from page: Workflow runs · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/actions
+
+Extracted content:
+```json
+{
+  "title": "Workflow runs · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/actions",
+  "summary": "Die Seite zeigt eine Übersicht über 22 Workflow-Runs für das GitHub-Repository `Feuer804/ainotizassistent`, die alle den Workflow 'Build macOS App' betreffen. Die Runs sind in absteigender chronologischer Reihenfolge ihrer Run ID gelistet. Der Fokus liegt auf dem Run mit der ID 19001564301, mit dem Titel \"FIX: Use macos-13 Ventura runner\". Alle aufgeführten Runs erscheinen als erfolgreich abgeschlossen, da für jeden eine Dauer angegeben ist und keine expliziten Fehlermeldungen oder Status 'fehlgeschlagen' vermerkt sind.",
+  "key_points": [
+    "Insgesamt 22 Workflow-Runs im Repository `Feuer804/ainotizassistent` gefunden.",
+    "Alle Runs beziehen sich auf den Workflow 'Build macOS App'.",
+    "Der aktuellste Run mit einer spezifischen Titelbeschreibung ist \"FIX: Use macos-13 Ventura runner\" (Run ID: 19001564301), der darauf abzielt, den `macos-13 Ventura` Runner zu nutzen.",
+    "Alle Runs scheinen erfolgreich gewesen zu sein (Status: ✅ erfolgreich), da für jeden eine Dauer angegeben ist und keine Fehlerhinweise oder rote Markierungen vorhanden sind.",
+    "Die Dauer der Runs variiert von wenigen Sekunden bis zu etwas über einer Minute.",
+    "Für manuelle Runs ist kein direkter Commit-Hash angegeben, im Gegensatz zu Runs, die durch einen Commit-Push ausgelöst wurden."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/actions",
+    "https://github.com/Feuer804/ainotizassistent/actions/runs/19001564301"
+  ],
+  "workflow_runs": [
+    {
+      "run_id": "19001564301",
+      "title": "FIX: Use macos-13 Ventura runner",
+      "status": "✅ erfolgreich",
+      "runner": "macos-13 Ventura",
+      "duration": "1m 5s",
+      "commit_hash": "cf3fe60"
+    },
+    {
+      "run_id": "19001176750",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "9s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "19001170432",
+      "title": "Update macOS runner to use latest version",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "9s",
+      "commit_hash": "656bc2f"
+    },
+    {
+      "run_id": "19000877084",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "1m 3s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "19000834811",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "1m 14s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "19000808210",
+      "title": "Fix: Improved build workflow with automatic project generation and UU…",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "50s",
+      "commit_hash": "c910788"
+    },
+    {
+      "run_id": "19000763125",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "1m 9s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18998209972",
+      "title": "Fix damaged Xcode project - create new compatible project with all 12…",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "1m 0s",
+      "commit_hash": "d5f9fcf"
+    },
+    {
+      "run_id": "18998158804",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "30s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18998130986",
+      "title": "Message 329537700528468 - 1762006395",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "37s",
+      "commit_hash": "8a00221"
+    },
+    {
+      "run_id": "18997925926",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "29s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18997909360",
+      "title": "Fix echo command for download link in workflow",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "28s",
+      "commit_hash": "abf56a8"
+    },
+    {
+      "run_id": "18997877090",
+      "title": "Update main.yml",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "39s",
+      "commit_hash": "345adb0"
+    },
+    {
+      "run_id": "18997866785",
+      "title": "Correct download link echo in workflow summary",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "34s",
+      "commit_hash": "ee3ff79"
+    },
+    {
+      "run_id": "18997808583",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "34s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18997805187",
+      "title": "Fix echo command for download link in workflow",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "27s",
+      "commit_hash": "ee6cee5"
+    },
+    {
+      "run_id": "18997543539",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "37s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18997540453",
+      "title": "Fix formatting in build summary echo command",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "48s",
+      "commit_hash": "078cdda"
+    },
+    {
+      "run_id": "18997409601",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "27s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18997404509",
+      "title": "Refactor GitHub Actions workflow for app build",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "36s",
+      "commit_hash": "70f2df1"
+    },
+    {
+      "run_id": "18997322194",
+      "title": "Build macOS App (Manually run by Feuer804)",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "20s",
+      "commit_hash": "N/A"
+    },
+    {
+      "run_id": "18997316543",
+      "title": "Add GitHub Actions workflow for macOS app build",
+      "status": "✅ erfolgreich",
+      "runner": "macOS",
+      "duration": "27s",
+      "commit_hash": "80cba0b"
+    }
+  ],
+  "file_name": "github_workflow_runs_ainotizassistent.json"
+}
+```

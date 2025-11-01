@@ -1,0 +1,23 @@
+📄 Extracted from page: Build macOS App · Workflow runs · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/actions/workflows/build-macos.yml
+
+Extracted content:
+```json
+{
+  "title": "Build macOS App · Workflow runs · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/actions/workflows/build-macos.yml",
+  "summary": "Die Seite zeigt die Historie der Ausführungen (Workflow-Runs) für den GitHub Actions Workflow 'Build macOS App' im Repository Feuer804/ainotizassistent. Der vollständige YAML-Inhalt der Workflow-Datei ist auf dieser spezifischen Seite nicht direkt eingebettet. Allerdings kann aus den Commit-Nachrichten abgeleitet werden, welche macOS-Runner-Version verwendet wird.",
+  "key_points": [
+    "Der vollständige YAML-Inhalt der Workflow-Datei ist auf dieser Seite nicht verfügbar, da die Seite die Workflow-Ausführungen und nicht die Datei selbst anzeigt.",
+    "Die 'runs-on:' Zeile ist nicht direkt sichtbar, aber eine Commit-Nachricht des Runs #10 ('FIX: Use macos-13 Ventura runner') deutet stark darauf hin, dass der Runner 'macos-13' verwendet wird.",
+    "Die verwendete macOS-Runner-Version ist 'macos-13' (Ventura), basierend auf der Commit-Nachricht des Runs #10.",
+    "Weitere wichtige Konfigurationen können von dieser Seite nicht extrahiert werden, da der YAML-Inhalt fehlt.",
+    "Die Seite listet 10 Workflow-Ausführungen für den 'Build macOS App' Workflow auf."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/blob/main/.github/workflows/build-macos.yml",
+    "https://github.com/Feuer804/ainotizassistent/actions/runs/19001564301"
+  ],
+  "file_name": "github_actions_macos_workflow_runs.json"
+}
+```
