@@ -1,0 +1,39 @@
+name: Minimal Test Build (Debug)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-build:
+    runs-on: macos-13
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Test Basic Build (Debug)
+        run: |
+          cd AINotizassistent
+          
+          echo "🔍 Test 1: Projekt-Schema auflisten"
+          xcodebuild -list -project AINotizassistent.xcodeproj
+          
+          echo "🔍 Test 2: Verfügbare Schemes prüfen"  
+          xcodebuild -listSchemes -project AINotizassistent.xcodeproj
+          
+          echo "🔍 Test 3: Debug Build (ohne Signierung)"
+          xcodebuild build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Debug \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            -verbose
+      
+      - name: Locate App Bundle
+        run: |
+          cd AINotizassistent
+          echo "🔍 Suche nach App-Bundle..."
+          find . -name "*.app" -type d
+          ls -la DerivedData/Build/Products/Debug/ 2>/dev/null || echo "Kein Debug-Build gefunden"

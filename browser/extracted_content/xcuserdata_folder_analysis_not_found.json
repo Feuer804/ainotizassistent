@@ -1,0 +1,23 @@
+📄 Extracted from page: File not found · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj/xcuserdata
+
+Extracted content:
+```json
+{
+  "title": "File not found · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj/xcuserdata",
+  "summary": "The requested page indicates that the `.xcuserdata` folder within the `AINotizassistent/AINotizassistent.xcodeproj` path was not found on the `main` branch of the `Feuer804/ainotizassistent` GitHub repository. Therefore, it was not possible to analyze schemes (`.xcscheme` files) or other configuration files within this folder as they are not present on the accessible page.",
+  "key_points": [
+    "The target path `AINotizassistent/AINotizassistent.xcodeproj/xcuserdata` does not exist on the `main` branch.",
+    "The page displays a 'File not found' (404) error.",
+    "No `.xcscheme` files or other Xcode configuration files could be extracted from the specified folder, as the folder itself is not present.",
+    "The page provides general GitHub navigation elements and a link to return to the repository overview."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent",
+    "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent",
+    "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj"
+  ],
+  "file_name": "xcuserdata_folder_analysis_not_found.json"
+}
+```

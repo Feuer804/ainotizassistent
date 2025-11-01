@@ -1,0 +1,22 @@
+📄 Extracted from page: ainotizassistent/AINotizassistent/AINotizassistent.xcodeproj at main · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj
+
+Extracted content:
+```json
+{
+  "title": "ainotizassistent/AINotizassistent/AINotizassistent.xcodeproj at main · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj",
+  "summary": "Die Seite zeigt den Inhalt des Xcode-Projektordners `AINotizassistent.xcodeproj` im GitHub-Repository `Feuer804/ainotizassistent`. Es ist eine Verzeichnisauflistung, die nur eine einzige Datei innerhalb dieses Projektordners direkt anzeigt: `project.pbxproj`. Informationen zu Schemes, Build-Konfigurationen oder Package-Dependencies sind auf dieser Seite nicht direkt ersichtlich, würden aber typischerweise in der Datei `project.pbxproj` definiert sein oder in der übergeordneten Verzeichnisstruktur (`Package.swift`).",
+  "key_points": [
+    "Das Zielverzeichnis ist `AINotizassistent/AINotizassistent/AINotizassistent.xcodeproj`.",
+    "Die einzige direkt im `.xcodeproj`-Verzeichnis gelistete Datei ist `project.pbxproj`.",
+    "Schemes, Build-Konfigurationen und Package-Dependencies sind auf dieser Verzeichnisebene nicht direkt sichtbar.",
+    "Die `project.pbxproj`-Datei ist die zentrale Konfigurationsdatei für das Xcode-Projekt."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/blob/main/AINotizassistent/AINotizassistent.xcodeproj/project.pbxproj",
+    "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent"
+  ],
+  "file_name": "xcode_project_structure.json"
+}
+```

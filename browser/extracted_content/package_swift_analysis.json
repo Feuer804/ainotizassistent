@@ -1,0 +1,25 @@
+📄 Extracted from page: ainotizassistent/Package.swift at main · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/blob/main/Package.swift
+
+Extracted content:
+```json
+{
+  "title": "ainotizassistent/Package.swift at main · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/blob/main/Package.swift",
+  "summary": "Die vorliegende `Package.swift`-Datei definiert ein Swift Package namens `SmartTextInputSystem`. Es ist für macOS (ab Version 12) konfiguriert und verwendet Swift-Tools-Version 5.7 sowie Swift Language Version 5. Das Paket exportiert eine Bibliothek mit dem Namen `SmartTextInputSystem`. Es enthält zwei Targets: `SmartTextInputSystem` und `SmartTextInputSystemTests`. Das Haupt-Target `SmartTextInputSystem` hat keine externen Swift Package Manager Dependencies deklariert. Das Test-Target `SmartTextInputSystemTests` hängt lediglich intern vom `SmartTextInputSystem`-Target ab. Da keine externen Abhängigkeiten vorhanden sind, gibt es keine Versionsinformationen zu extrahieren und folglich keine potentiellen Versionskonflikte oder problematischen externen Abhängigkeiten zu identifizieren.",
+  "key_points": [
+    "**Swift-tools-version**: `5.7`",
+    "**Package Name**: `SmartTextInputSystem`",
+    "**Supported Platforms**: `.macOS(.v12)`",
+    "**Products**: Definiert eine Bibliothek namens `SmartTextInputSystem`.",
+    "**Targets**: ",
+    "   - `SmartTextInputSystem`: Das Haupt-Target, das `Resources` verarbeitet. **Es sind keine externen Swift Package Dependencies deklariert.**",
+    "   - `SmartTextInputSystemTests`: Ein Test-Target, das vom `SmartTextInputSystem`-Target abhängt.",
+    "**Swift Language Version**: `.v5`",
+    "**Externe Abhängigkeiten**: Es wurden **keine externen Swift Package Dependencies** in dieser `Package.swift`-Datei gefunden.",
+    "**Versionskonflikte/Problematische Dependencies**: Aufgrund des Fehlens externer Dependencies gibt es **keine potenziellen Versionskonflikte oder problematischen externen Abhängigkeiten** zu berichten."
+  ],
+  "relevant_links": [],
+  "file_name": "package_swift_analysis.json"
+}
+```

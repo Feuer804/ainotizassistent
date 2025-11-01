@@ -1,0 +1,21 @@
+📄 Extracted from page: File not found · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj/xcshareddata
+
+Extracted content:
+```json
+{
+  "title": "File not found · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent/AINotizassistent.xcodeproj/xcshareddata",
+  "summary": "The requested `xcshareddata` folder, located at `AINotizassistent/AINotizassistent.xcodeproj/xcshareddata` within the `ainotizassistent` repository's `main` branch, was not found. The page displays a '404 - page not found' error, indicating that the content for analysis (Schemes-Dateien like .xcscheme or other shared configuration files) could not be retrieved from this location.",
+  "key_points": [
+    "The target path `AINotizassistent/AINotizassistent.xcodeproj/xcshareddata` does not exist on the GitHub repository's main branch.",
+    "No `.xcscheme` files or other shared configuration files could be analyzed as the folder is missing.",
+    "The page returns a '404 - page not found' error.",
+    "The analysis goal could not be fulfilled due to the absence of the specified directory."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent"
+  ],
+  "file_name": "xcshareddata_analysis_not_found.json"
+}
+```

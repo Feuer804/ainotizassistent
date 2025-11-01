@@ -1,0 +1,35 @@
+📄 Extracted from page: ainotizassistent/AINotizassistent at main · Feuer804/ainotizassistent · GitHub
+URL: https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent
+
+Extracted content:
+```json
+{
+  "title": "ainotizassistent/AINotizassistent at main · Feuer804/ainotizassistent · GitHub",
+  "url": "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent",
+  "summary": "This GitHub page details the contents of the `AINotizassistent` folder, which serves as the core directory for an intelligent macOS menubar application. The application, also named 'AINotizassistent', is designed for voice recording, automatic transcription, note management, and AI-supported workflows. The folder contains the main Xcode project file (`AINotizassistent.xcodeproj`), the application's source code within a nested `AINotizassistent` folder, GitHub Actions workflows, various Swift source files implementing features like AI providers (OpenAI, Ollama, OpenRouter), content analysis, integrations (Notion, Obsidian, Apple Notes), performance monitoring, and UI components. It also includes comprehensive documentation in Markdown format for different aspects of the project, build instructions, and troubleshooting guides.",
+  "key_points": [
+    "The `AINotizassistent` folder contains 4 subfolders: `.github/workflows`, `AINotizassistent.xcodeproj`, `AINotizassistent` (main app source), and `tmp`.",
+    "The folder explicitly contains `AINotizassistent.xcodeproj`, which is the primary Xcode project file for the application.",
+    "The `AINotizassistent` (inner) subfolder, as described in the README, acts as the 'Haupt-App-Bundle' and contains core application files like `AINotizassistentApp.swift`, `ContentView.swift`, `AppDelegate.swift`, `Note.swift`, `SettingsView.swift`, `Info.plist`, `AINotizassistent.entitlements`, and `Assets.xcassets`.",
+    "The top-level `AINotizassistent` folder also contains numerous Swift files for various functionalities, including:",
+    "  - `ABTestPromptManager.swift`, `ActiveAppMonitor.swift`, `AppleNotesIntegrationSummary.swift`, `AppleScriptManager.swift`",
+    "  - `AutoSaveManager.swift`, `AutoSaveStatusView.swift`, `BatteryOptimizer.swift`",
+    "  - `CompatibilityManager.swift`, `CompatibilityMatrix.md`",
+    "  - `ContentAnalyzer.swift`, `ContentAnalyzerExtensions.swift`, `ContentAnalyzerView.swift`, `ContentGenerationViews.swift`, `ContentProcessor.swift`, `ContentQualityAssessor.swift`, `ContentType.swift`, `ContentViewWithVoiceInput.swift`",
+    "  - `ContextWindowManager.swift`, `CoreMLManager.swift`, `CustomPromptTemplate.swift`",
+    "  - `GlassEffectManager.swift`, `ImageProcessor.swift`, `KIProvider.swift`, `LLMProvider.swift`, `LanguageDetector.swift`, `LocalLLMManager.swift`",
+    "  - `MeetingRecapGenerator.swift`, `MeetingRecapView.swift`, `NLModel.swift`, `NoteModel.swift`",
+    "  - Integration files: `NotesIntegration.swift`, `NotionIntegration.swift`, `ObsidianIntegration.swift`, `OllamaClient.swift`, `OpenAIClient.swift`, `OpenRouterClient.swift`",
+    "  - Performance related files: `PerformanceBenchmarker.swift`, `PerformanceDashboardView.swift`, `PerformanceMonitor.swift`",
+    "  - Prompt related files: `PromptAnalyticsTracker.swift`, `PromptCache.swift`, `PromptEngineeringDemo.swift`, `PromptManager.swift`",
+    "  - Storage related files: `StorageDashboardView.swift`, `StorageManager.swift`, `StorageOptimizer.swift`, `StorageService.swift`, `StorageSettingsView.swift`, `StorageSystemTests.swift`",
+    "  - Voice Input files: `VoiceInputGlassComponents.swift`, `VoiceInputIntegration.swift`, `VoiceInputManager.swift`, `VoiceInputView.swift`",
+    "It also includes various Markdown documentation files (e.g., `AnimationSystem_Documentation.md`, `Apple_Notes_Integration_README.md`, `Notion_Integration_Documentation.md`, `PromptEngineering_Documentation.md`, `README.md`) and shell scripts (`github-upload.sh`, `quick-setup.sh`).",
+    "No other `.xcodeproj` files were found directly within the `AINotizassistent` folder."
+  ],
+  "relevant_links": [
+    "https://github.com/Feuer804/ainotizassistent/tree/main/AINotizassistent"
+  ],
+  "file_name": "ainotizassistent_folder_analysis.json"
+}
+```
