@@ -1,67 +1,77 @@
-name: Build macOS App
+name: Build macOS App (DEBUG TEST)
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # Ermöglicht manuelles Starten
+  workflow_dispatch:   # Erlaubt manuelles Starten
 
 jobs:
   build:
-    name: Build AI Notizassistent
-    runs-on: macos-13   # macOS Ventura mit Xcode 15
+    name: Build AI Notizassistent (Debug Test)
+    runs-on: macos-13
     
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
     
-    - name: Setup Xcode
-      run: |
-        sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
-        xcodebuild -version
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+          xcodebuild -version
     
-    - name: Install Dependencies (falls erforderlich)
-      run: |
-        # Falls Sie CocoaPods oder Swift Package Manager Dependencies haben
-        # pod install (falls Podfile vorhanden)
-        # oder wird automatisch von xcodebuild gemacht
-        echo "Dependencies check..."
+      - name: Debug: Check Project Configuration
+        run: |
+          cd AINotizassistent
+          echo "=== 1. XCODEBUILD LIST ==="
+          xcodebuild -list -project AINotizassistent.xcodeproj
+          echo ""
+          echo "=== 2. AVAILABLE SCHEMES ==="
+          xcodebuild -listSchemes -project AINotizassistent.xcodeproj
+          echo ""
+          echo "=== 3. PROJECT INFO ==="
+          ls -la
+          echo ""
+          echo "=== 4. BUILD SETTINGS ==="
+          xcodebuild -list -project AINotizassistent.xcodeproj | grep -A 20 "Build Configuration"
     
-    - name: Build App
-      run: |
-        cd AINotizassistent
-        xcodebuild clean build \
-          -project AINotizassistent.xcodeproj \
-          -scheme AINotizassistent \
-          -configuration Release \
-          -derivedDataPath ./DerivedData \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGNING_ALLOWED=NO
+      - name: Debug: Clean Build
+        run: |
+          cd AINotizassistent
+          echo "=== 5. CLEAN BUILD ==="
+          xcodebuild clean \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -verbose
     
-    - name: Locate Built App
-      run: |
-        echo "Suche nach .app Datei..."
-        find AINotizassistent/DerivedData -name "*.app" -type d
+      - name: Debug: Simple Build (No Artifacts)
+        run: |
+          cd AINotizassistent
+          echo "=== 6. SIMPLE DEBUG BUILD ==="
+          xcodebuild build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Debug \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            -verbose
     
-    - name: Create ZIP Archive
-      run: |
-        cd AINotizassistent/DerivedData/Build/Products/Release
-        zip -r AINotizassistent.zip AINotizassistent.app
-        mv AINotizassistent.zip $GITHUB_WORKSPACE/
-    
-    - name: Upload App as Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: AINotizassistent-macOS
-        path: |
-          AINotizassistent.zip
-          AINotizassistent/DerivedData/Build/Products/Release/AINotizassistent.app
-        retention-days: 30
-    
-    - name: Build Summary
-      run: |
-        echo "✅ Build erfolgreich abgeschlossen!"
-        echo "📦 App-Größe: $(du -h AINotizassistent.zip | cut -f1)"
-        echo "📍 Download: GitHub Actions → Artifacts → AINotizassistent-macOS"
+      - name: Debug: Check Build Result
+        run: |
+          cd AINotizassistent
+          echo "=== 7. BUILD RESULT ANALYSIS ==="
+          echo "Check DerivedData..."
+          ls -la DerivedData/Build/Products/Debug/ 2>/dev/null || echo "Kein Debug-Output gefunden"
+          echo ""
+          echo "Search for any .app files..."
+          find . -name "*.app" -type d 2>/dev/null || echo "Keine .app Dateien gefunden"
+          echo ""
+          echo "Check if build was successful..."
+          if [ -d "DerivedData/Build/Products/Debug/AINotizassistent.app" ]; then
+            echo "✅ SUCCESS: App bundle found!"
+            ls -la DerivedData/Build/Products/Debug/AINotizassistent.app/
+          else
+            echo "❌ FAILED: App bundle not found"
+          fi
