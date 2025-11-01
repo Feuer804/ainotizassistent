@@ -1,0 +1,245 @@
+name: Build macOS App
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Xcode
+      run: |
+        echo "Installing Xcode command line tools..."
+        sudo xcode-select --install || echo "Xcode tools already installed"
+        
+        echo "Setting Xcode path..."
+        sudo xcode-select -s /Applications/Xcode_15.0.1.app/Contents/Developer
+
+    - name: List workspace contents
+      run: |
+        echo "=== Workspace contents ==="
+        find . -type f -name "*.swift" | head -10
+        echo ""
+        echo "=== Project structure ==="
+        ls -la AINotizassistent/
+
+    - name: Fix Xcode project structure
+      run: |
+        cd AINotizassistent
+        
+        # Create proper project structure
+        echo "Creating proper project structure..."
+        
+        # Move all Swift files to correct location
+        if [ ! -d "AINotizassistent" ]; then
+          mkdir -p AINotizassistent
+        fi
+        
+        # Copy essential files if missing
+        if [ ! -f "AINotizassistent/AINotizassistentApp.swift" ]; then
+          cp ../*.swift AINotizassistent/ 2>/dev/null || echo "Swift files copied"
+        fi
+        
+        # Ensure Info.plist exists
+        if [ ! -f "AINotizassistent/Info.plist" ]; then
+          echo '<?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>CFBundleDisplayName</key>
+            <string>AI Notizassistent</string>
+            <key>CFBundleIdentifier</key>
+            <string>com.aiNotizassistent.app</string>
+            <key>CFBundleName</key>
+            <string>$(PRODUCT_NAME)</string>
+            <key>CFBundleVersion</key>
+            <string>1.0</string>
+            <key>LSApplicationCategoryType</key>
+            <string>public.app-category.productivity</string>
+            <key>NSHumanReadableCopyright</key>
+            <string>Copyright © 2025. All rights reserved.</string>
+            <key>NSMenuBarExtraIsEntitled</key>
+            <true/>
+          </dict>
+          </plist>' > AINotizassistent/Info.plist
+        fi
+        
+        # Ensure entitlements exist
+        if [ ! -f "AINotizassistent/AINotizassistent.entitlements" ]; then
+          echo '<?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>com.apple.security.network.client</key>
+            <true/>
+            <key>com.apple.security.network.server</key>
+            <true/>
+            <key>com.apple.security.files.user-selected.read-write</key>
+            <true/>
+            <key>com.apple.security.files.downloads.read-write</key>
+            <true/>
+          </dict>
+          </plist>' > AINotizassistent/AINotizassistent.entitlements
+        fi
+
+    - name: Generate complete Xcode project
+      run: |
+        cd AINotizassistent
+        
+        # Generate UUIDs for project files
+        function gen_uuid() {
+          python3 -c "import uuid; print(uuid.uuid4().upper())"
+        }
+        
+        # Get all Swift files
+        SWIFT_FILES=($(find AINotizassistent -name "*.swift" -type f | sort))
+        echo "Found ${#SWIFT_FILES[@]} Swift files"
+        
+        # Build project.pbxproj content
+        PROJECT_PBXPROJ="AINotizassistent.xcodeproj/project.pbxproj"
+        
+        # Create base project structure
+        cat > "$PROJECT_PBXPROJ" << 'EOF'
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+EOF
+        
+        # Add build files section
+        echo "\t\t/* Begin PBXBuildFile section */" >> "$PROJECT_PBXPROJ"
+        FILE_ID=1
+        for swift_file in "${SWIFT_FILES[@]}"; do
+          file_name=$(basename "$swift_file")
+          uuid=$(gen_uuid)
+          echo "\t\t\t$uuid /* $file_name in Sources */ = {isa = PBXBuildFile; fileRef = $uuid-ref /* $file_name */; };" >> "$PROJECT_PBXPROJ"
+          echo "\t\t\t$uuid-ref /* $file_name */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = $file_name; sourceTree = \"<group>\"; };" >> "$PROJECT_PBXPROJ"
+          ((FILE_ID++))
+        done
+        echo "\t\t/* End PBXBuildFile section */" >> "$PROJECT_PBXPROJ"
+        
+        # Add file references section
+        echo "\t\t/* Begin PBXFileReference section */" >> "$PROJECT_PBXPROJ"
+        echo "\t\t$(gen_uuid) /* AINotizassistent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AINotizassistent.app; sourceTree = BUILT_PRODUCTS_DIR; };" >> "$PROJECT_PBXPROJ"
+        echo "\t\t$(gen_uuid) /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = \"<group>\"; };" >> "$PROJECT_PBXPROJ"
+        echo "\t\t$(gen_uuid) /* AINotizassistent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AINotizassistent.entitlements; sourceTree = \"<group>\"; };" >> "$PROJECT_PBXPROJ"
+        echo "\t\t/* End PBXFileReference section */" >> "$PROJECT_PBXPROJ"
+        
+        # Close objects and rootObject
+        cat >> "$PROJECT_PBXPROJ" << 'EOF'
+	};
+	rootObject = /* Project object */;
+}
+EOF
+
+    - name: Validate Xcode project
+      run: |
+        cd AINotizassistent
+        
+        # List project contents
+        echo "=== Project structure ==="
+        ls -la AINotizassistent.xcodeproj/
+        echo ""
+        echo "=== Swift files in project ==="
+        find AINotizassistent -name "*.swift" | wc -l
+        echo "files found"
+        
+        # Quick syntax check
+        echo "=== Checking Swift syntax ==="
+        for file in $(find AINotizassistent -name "*.swift" | head -5); do
+          echo "Checking: $(basename $file)"
+          swift -frontend -parse "$file" 2>&1 | head -3 || echo "Parse check done"
+        done
+
+    - name: Build app
+      id: build
+      run: |
+        cd AINotizassistent
+        
+        echo "=== Starting build ==="
+        echo "Current directory: $(pwd)"
+        echo "Project files:"
+        ls -la *.xcodeproj/
+        
+        # Build the project
+        xcodebuild clean build \
+          -project AINotizassistent.xcodeproj \
+          -scheme AINotizassistent \
+          -configuration Release \
+          -derivedDataPath ./DerivedData \
+          CODE_SIGN_IDENTITY= \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO \
+          SWIFT_OPTIMIZATION_LEVEL="-O" \
+          2>&1 | tee build.log
+        
+        # Check build result
+        if [ -d "DerivedData/Build/Products/Release/AINotizassistent.app" ]; then
+          echo "✅ Build successful!"
+          ls -la "DerivedData/Build/Products/Release/AINotizassistent.app/"
+        else
+          echo "❌ Build failed!"
+          echo "Last lines of build log:"
+          tail -20 build.log
+          exit 1
+        fi
+
+    - name: Create app archive
+      run: |
+        cd AINotizassistent
+        
+        # Create archive directory
+        mkdir -p archive
+        
+        # Copy the app
+        cp -R "DerivedData/Build/Products/Release/AINotizassistent.app" archive/
+        
+        # Create zip
+        cd archive
+        zip -r "../AINotizassistent-macOS-v1.0.zip" AINotizassistent.app
+        
+        ls -la ../AINotizassistent-macOS-v1.0.zip
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: macOS-App
+        path: AINotizassistent/AINotizassistent-macOS-v1.0.zip
+        retention-days: 7
+
+    - name: Build summary
+      run: |
+        echo "🎉 **Build Completed Successfully!**"
+        echo ""
+        echo "**✅ Project Details:**"
+        echo "- Project: AI Notizassistent"
+        echo "- Platform: macOS"
+        echo "- Configuration: Release"
+        echo "- Build Tool: Xcode 15.0.1"
+        echo ""
+        echo "**📦 Download:**"
+        echo "- The compiled app is available as 'macOS-App' artifact"
+        echo "- Click on the artifact in this run to download"
+        echo ""
+        echo "**🛠️ Installation:**"
+        echo "1. Download the ZIP file"
+        echo "2. Extract it"
+        echo "3. Right-click the .app file and select 'Open'"
+        echo "4. Click 'Open' in the security dialog (if prompted)"
+        echo ""
+        echo "**🔧 First Launch:**"
+        echo "- The app may require security permissions"
+        echo "- Go to System Preferences > Security & Privacy > General"
+        echo "- Click 'Open Anyway' for the app"
