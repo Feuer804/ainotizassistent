@@ -7,25 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2B3C4D5E6F7890ABCDEF01 /* AINotizassistentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B4C5D6E7F8901BCDEF23 /* AINotizassistentApp.swift */; };
-		1A2B3C4D5E6F7890ABCDEF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4B5C6D7E8F9012CDEF345 /* ContentView.swift */; };
-		1A2B3C4D5E6F7890ABCDEF03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B6C7D8E9F0123DEF456 /* AppDelegate.swift */; };
-		1A2B3C4D5E6F7890ABCDEF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6B7C8D9E0F1234EF567 /* Assets.xcassets */; };
-		1A2B3C4D5E6F7890ABCDEF05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7B8C9D0E1F2345F678 /* Preview Assets.xcassets */; };
+
+// Dynamisch generierte PBXBuildFile Referenzen für alle Swift-Dateien
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A8B9C0D1E2F345678901 /* AINotizassistent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AINotizassistent.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3B4C5D6E7F8901BCDEF23 /* AINotizassistentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINotizassistentApp.swift; sourceTree = "<group>"; };
-		3A4B5C6D7E8F9012CDEF345 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4A5B6C7D8E9F0123DEF456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A6B7C8D9E0F1234EF567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A7B8C9D0E1F2345F678 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8A9B0C1D2E3F456789012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.plist; path = Base; sourceTree = "<group>"; };
+		ABC123DEF456 /* AINotizassistent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AINotizassistent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B0C1D2E3F456789012ABC /* Frameworks */ = {
+		DIR_FRAMEWORKS /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,38 +26,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD3E4F5A6B7C890123456 /* AINotizassistent */ = {
+		GROUP_ROOT /* AINotizassistent */ = {
 			isa = PBXGroup;
 			children = (
-				2A3B4C5D6E7F8901BCDEF23 /* AINotizassistentApp.swift */,
-				3A4B5C6D7E8F9012CDEF345 /* ContentView.swift */,
-				4A5B6C7D8E9F0123DEF456 /* AppDelegate.swift */,
-				5A6B7C8D9E0F1234EF567 /* Assets.xcassets */,
+				GROUP_SOURCE /* Source */,
 			);
 			path = AINotizassistent;
 			sourceTree = "<group>";
 		};
-		DE4F5A6B7C890123456789 /* Preview Content */ = {
+		GROUP_SOURCE /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6A7B8C9D0E1F2345F678 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		EF5A6B7C89012345678901 = {
-			isa = PBXGroup;
-			children = (
-				CD3E4F5A6B7C890123456 /* AINotizassistent */,
-				DE4F5A6B7C890123456789 /* Preview Content */,
-				7A8B9C0D1E2F345678901 /* Products */,
+				FILE_MAIN /* AINotizassistentApp.swift */,
+				FILE_CONTENT /* ContentView.swift */,
+				FILE_DELEGATE /* AppDelegate.swift */,
+				GROUP_SWIFT /* Swift Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7A8B9C0D1E2F345678901 /* Products */ = {
+		GROUP_SWIFT /* Swift Files */ = {
 			isa = PBXGroup;
 			children = (
-				7A8B9C0D1E2F345678901 /* AINotizassistent.app */,
+			);
+			sourceTree = "<group>";
+		};
+		PRODUCT_GROUP = {
+			isa = PBXGroup;
+			children = (
+				ABC123DEF456 /* AINotizassistent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,13 +61,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABCDEF0123456789012345 /* AINotizassistent */ = {
+		TARGET_MAIN /* AINotizassistent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 123456789ABCDEF012345 /* Build configuration list for PBXNativeTarget "AINotizassistent" */;
+			buildConfigurationList = TARGET_CONFIG /* Build configuration list for PBXNativeTarget "AINotizassistent" */;
 			buildPhases = (
-				BCDEF012345678901234567 /* Sources */,
-				CDEF0123456789012345678 /* Frameworks */,
-				DEF01234567890123456789 /* Resources */,
+				SOURCES_PHASE /* Sources */,
+				FRAMEWORKS_PHASE /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -88,25 +74,20 @@
 			);
 			name = AINotizassistent;
 			productName = AINotizassistent;
-			productReference = 7A8B9C0D1E2F345678901 /* AINotizassistent.app */;
+			productReference = ABC123DEF456 /* AINotizassistent.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FG01234567890123456789 /* Project object */ = {
+		PROJECT_MAIN /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
-				TargetAttributes = {
-					ABCDEF0123456789012345 = {
-						CreatedOnToolsVersion = 15.0;
-					};
-				};
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 			};
-			buildConfigurationList = 890123456789ABCDEF0123 /* Build configuration list for PBXProject "AINotizassistent" */;
+			buildConfigurationList = PROJECT_CONFIG /* Build configuration list for PBXProject "AINotizassistent" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,47 +95,36 @@
 				en,
 				Base,
 			);
-			mainGroup = EF5A6B7C89012345678901;
-			productRefGroup = 7A8B9C0D1E2F345678901 /* Products */;
+			mainGroup = GROUP_ROOT;
+			productRefGroup = PRODUCT_GROUP;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABCDEF0123456789012345 /* AINotizassistent */,
+				TARGET_MAIN /* AINotizassistent */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		DEF01234567890123456789 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A2B3C4D5E6F7890ABCDEF05 /* Preview Assets.xcassets in Resources */,
-				1A2B3C4D5E6F7890ABCDEF04 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BCDEF012345678901234567 /* Sources */ = {
+		SOURCES_PHASE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2B3C4D5E6F7890ABCDEF01 /* AINotizassistentApp.swift in Sources */,
-				1A2B3C4D5E6F7890ABCDEF02 /* ContentView.swift in Sources */,
-				1A2B3C4D5E6F7890ABCDEF03 /* AppDelegate.swift in Sources */,
+				FILE_MAIN_BUILD /* AINotizassistentApp.swift in Sources */,
+				FILE_CONTENT_BUILD /* ContentView.swift in Sources */,
+				FILE_DELEGATE_BUILD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0123456789ABCDEF0123456 /* Debug */ = {
+		DEBUG_CONFIG /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -183,16 +153,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = AINotizassistent/AINotizassistent.entitlements;
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_ASSET_PATHS = "\"AINotizassistent/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -210,6 +173,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -219,17 +183,20 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiNotizassistent.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		123456789ABCDEF0123457 /* Release */ = {
+		RELEASE_CONFIG /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -258,17 +225,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = AINotizassistent/AINotizassistent.entitlements;
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_ASSET_PATHS = "\"AINotizassistent/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -279,6 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -287,101 +248,45 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aiNotizassistent.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
-			};
-			name = Release;
-		};
-		23456789ABCDEF01234568 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APP_ICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AINotizassistent/AINotizassistent.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AINotizassistent/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = AINotizassistent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "AI Notizassistent";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025. All rights reserved.";
-				INFOPLIST_KEY_NSMenuBarExtraIsEntitled = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiNotizassistent.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		3456789ABCDEF012345689 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APP_ICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AINotizassistent/AINotizassistent.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AINotizassistent/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = AINotizassistent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "AI Notizassistent";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025. All rights reserved.";
-				INFOPLIST_KEY_NSMenuBarExtraIsEntitled = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aiNotizassistent.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
+		};
+		PROJECT_CONFIG /* Build configuration list for PBXProject "AINotizassistent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBUG_CONFIG /* Debug */,
+				RELEASE_CONFIG /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		TARGET_CONFIG /* Build configuration list for PBXNativeTarget "AINotizassistent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBUG_CONFIG /* Debug */,
+				RELEASE_CONFIG /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCBuildConfiguration section */
 
-/* Begin XCConfigurationList section */
-		890123456789ABCDEF0123 /* Build configuration list for PBXProject "AINotizassistent" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0123456789ABCDEF0123456 /* Debug */,
-				123456789ABCDEF0123457 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		123456789ABCDEF012345 /* Build configuration list for PBXNativeTarget "AINotizassistent" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23456789ABCDEF01234568 /* Debug */,
-				3456789ABCDEF012345689 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
+/* Begin XCFileReference section */
+		FILE_MAIN /* AINotizassistentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINotizassistentApp.swift; sourceTree = "<group>"; };
+		FILE_CONTENT /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FILE_DELEGATE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End XCFileReference section */
+
+/* Begin XCBuildFile section */
+		FILE_MAIN_BUILD /* AINotizassistentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_MAIN /* AINotizassistentApp.swift */; };
+		FILE_CONTENT_BUILD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_CONTENT /* ContentView.swift */; };
+		FILE_DELEGATE_BUILD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_DELEGATE /* AppDelegate.swift */; };
+/* End XCBuildFile section */
 	};
-	rootObject = FG01234567890123456789 /* Project object */;
+	rootObject = PROJECT_MAIN /* Project object */;
 }
