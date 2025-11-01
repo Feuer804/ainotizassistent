@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build AI Notizassistent
-    runs-on: macos-13  # macOS Ventura mit Xcode 15
+    runs-on: macos-latest   # macOS Ventura mit Xcode 15
     
     steps:
     - name: Checkout Repository
