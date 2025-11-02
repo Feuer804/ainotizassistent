@@ -127,10 +127,11 @@ class AudioRecorder: NSObject, ObservableObject {
     func startRecording() {
         guard !isRecording else { return }
         
-        let audioSession = AVAudioSession.sharedInstance()
+        // AVAudioSession ist auf macOS nicht verfügbar - Audio-Funktionalität deaktiviert
+        // Für macOS würde eine andere Implementierung benötigt werden
         do {
-            try audioSession.setCategory(.record, mode: .default, options: [.defaultToSpeaker])
-            try audioSession.setActive(true)
+            // try audioSession.setCategory(.record, mode: .default, options: [.defaultToSpeaker])
+            // try audioSession.setActive(true)
             
             // Temporäre Datei für Aufnahme erstellen
             let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]

@@ -113,6 +113,7 @@
 				FILE_MAIN_BUILD /* AINotizassistentApp.swift in Sources */,
 				FILE_CONTENT_BUILD /* ContentView.swift in Sources */,
 				FILE_DELEGATE_BUILD /* AppDelegate.swift in Sources */,
+				FILE_SIMPLETYPES_BUILD /* SimpleTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,12 +280,14 @@
 /* Begin XCFileReference section */
 		FILE_MAIN /* AINotizassistentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINotizassistentApp.swift; sourceTree = "<group>"; };
 		FILE_CONTENT /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FILE_SIMPLETYPES /* SimpleTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTypes.swift; sourceTree = "<group>"; };
 		FILE_DELEGATE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End XCFileReference section */
 
 /* Begin XCBuildFile section */
 		FILE_MAIN_BUILD /* AINotizassistentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_MAIN /* AINotizassistentApp.swift */; };
 		FILE_CONTENT_BUILD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_CONTENT /* ContentView.swift */; };
+		FILE_SIMPLETYPES_BUILD /* SimpleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_SIMPLETYPES /* SimpleTypes.swift */; };
 		FILE_DELEGATE_BUILD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FILE_DELEGATE /* AppDelegate.swift */; };
 /* End XCBuildFile section */
 	};
