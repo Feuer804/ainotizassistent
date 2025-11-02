@@ -8,6 +8,7 @@
 
 import SwiftUI
 import AppKit
+import AVFoundation
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
