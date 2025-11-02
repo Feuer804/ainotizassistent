@@ -1,61 +1,12 @@
 {
   "todos": {
     "Coordinator": {
-      "1": {
-        "id": "1",
-        "content": "Grundlegende macOS-Menüleisten-App mit Swift/SwiftUI erstellen",
-        "details": "1. Xcode-Projekt einrichten\n2. Menüleisten-Icon und Dropdown implementieren\n3. Globale Tastenkombination (⌘⇧N) einrichten\n4. Basis-GUI mit Tab-Struktur erstellen",
-        "status": "completed",
+      "9": {
+        "id": "9",
+        "content": "GitHub Actions Build-Fehler beheben",
+        "details": "1. GitHub Secret-Sperre aufheben (User-Bestätigung erforderlich)\n2. Korrekte SimpleTypes.swift Einbindung sicherstellen\n3. AVAudioSession Code für macOS anpassen\n4. Build neu triggern und verifizieren\n5. macOS-13 Runner-Deprecation Warnung beheben",
+        "status": "in_progress",
         "priority": "high"
-      },
-      "2": {
-        "id": "2",
-        "content": "Glass-Design und Animationen implementieren",
-        "details": "1. macOS Vision Glass-Look mit Blur-Hintergrund\n2. Runde Ecken und sanfte Schatten\n3. Dark/Light Mode Support\n4. Fade-in/Roll-in Animationen beim Öffnen",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "3": {
-        "id": "3",
-        "content": "Text-Eingabe und Auto-Erkennung entwickeln",
-        "details": "1. Text-Eingabefeld mit Paste-Erkennung\n2. Auto-Erkennung der Quell-App (Mail, Safari, Xcode)\n3. Content-Type Detection (E-Mail, Meeting, Artikel)\n4. Mikrofon-Integration für Spracheingabe",
-        "status": "completed",
-        "priority": "high"
-      },
-      "4": {
-        "id": "4",
-        "content": "KI-Integration implementieren",
-        "details": "1. Cloud-APIs (OpenAI, OpenRouter) mit einstellbarer Auswahl\n2. Lokale Verarbeitung mit Ollama/GPT4All (später)\n3. Content-Analyse für verschiedene Typen (E-Mail, Meeting, Artikel)\n4. Prompt-Engineering für optimale Ergebnisse\n5. KI-Anbieter-Auswahl in App-Einstellungen",
-        "status": "completed",
-        "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "KI-Ausgabe und Verarbeitung",
-        "details": "1. Drei Ausgabeformate: Zusammenfassung, To-do-Liste, Meeting-Recap\n2. Smart Content Processing je nach erkanntem Typ\n3. Preview-Funktion vor Speicherung\n4. Export-Optionen",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "6": {
-        "id": "6",
-        "content": "Speicher-Integration implementieren",
-        "details": "1. Apple Notes Integration via Shortcuts API\n2. Obsidian lokale .md-Dateien\n3. Notion API Integration\n4. Automatische Speicherung je nach Benutzerwahl",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "7": {
-        "id": "7",
-        "content": "Einstellungen und Konfiguration",
-        "details": "1. Einstellungsfenster im Dropdown-Menü\n2. API-Key Management\n3. Lokale vs. Cloud-Verarbeitung Toggle\n4. Standard-Speicherziel Auswahl\n5. Shortcut-Anpassung",
-        "status": "completed",
-        "priority": "low"
-      },
-      "8": {
-        "id": "8",
-        "content": "Testing und Optimierung",
-        "details": "1. Funktionalitätstests aller Features\n2. Performance-Optimierung\n3. macOS-Version Kompatibilität\n4. Packaging und Distribution",
-        "status": "completed",
-        "priority": "low"
       }
     }
   }
