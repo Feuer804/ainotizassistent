@@ -1,0 +1,73 @@
+name: Build macOS App (DEBUG TEST)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build AI Notizassistent
+    runs-on: macos-13
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+    
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+          xcodebuild -version
+    
+      - name: Debug Check Project Configuration
+        run: |
+          cd AINotizassistent
+          echo "=== 1. XCODEBUILD LIST ==="
+          xcodebuild -list -project AINotizassistent.xcodeproj
+          echo ""
+          echo "=== 2. AVAILABLE SCHEMES ==="
+          xcodebuild -listSchemes -project AINotizassistent.xcodeproj
+          echo ""
+          echo "=== 3. PROJECT INFO ==="
+          ls -la
+          echo ""
+          echo "=== 4. BUILD SETTINGS ==="
+          xcodebuild -list -project AINotizassistent.xcodeproj | grep -A 20 "Build Configuration"
+    
+      - name: Debug Clean Build
+        run: |
+          cd AINotizassistent
+          echo "=== 5. CLEAN BUILD ==="
+          xcodebuild clean -project AINotizassistent.xcodeproj -scheme AINotizassistent
+    
+      - name: Debug Simple Build
+        run: |
+          cd AINotizassistent
+          echo "=== 6. SIMPLE DEBUG BUILD ==="
+          xcodebuild build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Debug \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+    
+      - name: Debug Check Build Result
+        run: |
+          cd AINotizassistent
+          echo "=== 7. BUILD RESULT ANALYSIS ==="
+          echo "Check DerivedData..."
+          ls -la DerivedData/Build/Products/Debug/ 2>/dev/null || echo "Kein Debug-Output gefunden"
+          echo ""
+          echo "Search for any .app files..."
+          find . -name "*.app" -type d 2>/dev/null || echo "Keine .app Dateien gefunden"
+          echo ""
+          echo "Check if build was successful..."
+          if [ -d "DerivedData/Build/Products/Debug/AINotizassistent.app" ]; then
+            echo "SUCCESS: App bundle found!"
+            ls -la DerivedData/Build/Products/Debug/AINotizassistent.app/
+          else
+            echo "FAILED: App bundle not found"
+          fi
