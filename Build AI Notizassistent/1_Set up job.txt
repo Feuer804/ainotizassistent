@@ -1,0 +1,30 @@
+﻿2025-11-02T11:16:32.1872720Z Current runner version: '2.329.0'
+2025-11-02T11:16:32.1906820Z ##[group]Runner Image Provisioner
+2025-11-02T11:16:32.1909170Z Hosted Compute Agent
+2025-11-02T11:16:32.1910130Z Version: 20251016.436
+2025-11-02T11:16:32.1911220Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-02T11:16:32.1912420Z Build Date: 2025-10-15T20:44:12Z
+2025-11-02T11:16:32.1913640Z ##[endgroup]
+2025-11-02T11:16:32.1914470Z ##[group]Operating System
+2025-11-02T11:16:32.1915170Z macOS
+2025-11-02T11:16:32.1915720Z 13.7.6
+2025-11-02T11:16:32.1916330Z 22H625
+2025-11-02T11:16:32.1916950Z ##[endgroup]
+2025-11-02T11:16:32.1917590Z ##[group]Runner Image
+2025-11-02T11:16:32.1918260Z Image: macos-13
+2025-11-02T11:16:32.1918860Z Version: 20250908.1476
+2025-11-02T11:16:32.1920350Z Included Software: https://github.com/actions/runner-images/blob/macos-13/20250908.1476/images/macos/macos-13-Readme.md
+2025-11-02T11:16:32.1922440Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-13%2F20250908.1476
+2025-11-02T11:16:32.1924150Z ##[endgroup]
+2025-11-02T11:16:32.1925810Z ##[group]GITHUB_TOKEN Permissions
+2025-11-02T11:16:32.1929680Z Contents: read
+2025-11-02T11:16:32.1930500Z Metadata: read
+2025-11-02T11:16:32.1931120Z Packages: read
+2025-11-02T11:16:32.1931950Z ##[endgroup]
+2025-11-02T11:16:32.1936160Z Secret source: Actions
+2025-11-02T11:16:32.1937300Z Prepare workflow directory
+2025-11-02T11:16:32.2418020Z Prepare all required actions
+2025-11-02T11:16:32.2472100Z Getting action download info
+2025-11-02T11:16:32.4548430Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-11-02T11:16:32.6996850Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-11-02T11:16:33.2376610Z Complete job name: Build AI Notizassistent

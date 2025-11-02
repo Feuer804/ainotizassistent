@@ -1,0 +1,17 @@
+﻿2025-11-02T11:16:46.3853600Z ##[group]Run cd AINotizassistent
+2025-11-02T11:16:46.3854480Z [36;1mcd AINotizassistent[0m
+2025-11-02T11:16:46.3855510Z [36;1mxcodebuild clean -project AINotizassistent.xcodeproj -scheme AINotizassistent[0m
+2025-11-02T11:16:46.4012960Z shell: /bin/bash -e {0}
+2025-11-02T11:16:46.4013520Z ##[endgroup]
+2025-11-02T11:16:47.7888440Z Command line invocation:
+2025-11-02T11:16:47.8270190Z     /Applications/Xcode_15.0.1.app/Contents/Developer/usr/bin/xcodebuild clean -project AINotizassistent.xcodeproj -scheme AINotizassistent
+2025-11-02T11:16:47.8457360Z 
+2025-11-02T11:16:47.8613080Z User defaults from command line:
+2025-11-02T11:16:47.8697120Z     IDEPackageSupportUseBuiltinSCM = YES
+2025-11-02T11:16:47.8825210Z 
+2025-11-02T11:16:48.1431580Z --- xcodebuild: WARNING: Using the first of multiple matching destinations:
+2025-11-02T11:16:48.1462270Z { platform:macOS, arch:x86_64, id:4203018E-580F-C1B5-9525-B745CECA79EB }
+2025-11-02T11:16:48.1503260Z { platform:macOS, name:Any Mac }
+2025-11-02T11:16:48.9533110Z 
+2025-11-02T11:16:48.9755840Z ** CLEAN SUCCEEDED **
+2025-11-02T11:16:48.9784600Z 

@@ -1,0 +1,7 @@
+﻿2025-11-02T11:16:35.4644470Z ##[group]Run sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+2025-11-02T11:16:35.4647140Z [36;1msudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer[0m
+2025-11-02T11:16:35.4649330Z [36;1mxcodebuild -version[0m
+2025-11-02T11:16:35.4803930Z shell: /bin/bash -e {0}
+2025-11-02T11:16:35.4805550Z ##[endgroup]
+2025-11-02T11:16:40.7753100Z Xcode 15.0.1
+2025-11-02T11:16:40.8646520Z Build version 15A507

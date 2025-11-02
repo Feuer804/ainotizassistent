@@ -1,0 +1,26 @@
+﻿2025-11-02T11:16:40.9192620Z ##[group]Run cd AINotizassistent
+2025-11-02T11:16:40.9193400Z [36;1mcd AINotizassistent[0m
+2025-11-02T11:16:40.9194010Z [36;1mecho "=== PROJECT INFORMATION ==="[0m
+2025-11-02T11:16:40.9195520Z [36;1mxcodebuild -list -project AINotizassistent.xcodeproj[0m
+2025-11-02T11:16:40.9395170Z shell: /bin/bash -e {0}
+2025-11-02T11:16:40.9396030Z ##[endgroup]
+2025-11-02T11:16:40.9786090Z === PROJECT INFORMATION ===
+2025-11-02T11:16:42.1157060Z Command line invocation:
+2025-11-02T11:16:42.1434960Z     /Applications/Xcode_15.0.1.app/Contents/Developer/usr/bin/xcodebuild -list -project AINotizassistent.xcodeproj
+2025-11-02T11:16:42.1441140Z 
+2025-11-02T11:16:42.1442430Z User defaults from command line:
+2025-11-02T11:16:42.1443950Z     IDEPackageSupportUseBuiltinSCM = YES
+2025-11-02T11:16:42.1445190Z 
+2025-11-02T11:16:46.2821400Z Information about project "AINotizassistent":
+2025-11-02T11:16:46.3387940Z     Targets:
+2025-11-02T11:16:46.3460440Z         AINotizassistent
+2025-11-02T11:16:46.3468000Z 
+2025-11-02T11:16:46.3576940Z     Build Configurations:
+2025-11-02T11:16:46.3619860Z         Debug
+2025-11-02T11:16:46.3649410Z         Release
+2025-11-02T11:16:46.3681750Z 
+2025-11-02T11:16:46.3720340Z     If no build configuration is specified and -scheme is not passed then "Release" is used.
+2025-11-02T11:16:46.3726560Z 
+2025-11-02T11:16:46.3752160Z     Schemes:
+2025-11-02T11:16:46.3755520Z         AINotizassistent
+2025-11-02T11:16:46.3776160Z 

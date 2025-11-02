@@ -1,0 +1,70 @@
+﻿2025-11-02T11:16:33.3185160Z ##[group]Run actions/checkout@v4
+2025-11-02T11:16:33.3186450Z with:
+2025-11-02T11:16:33.3187070Z   repository: Feuer804/ainotizassistent
+2025-11-02T11:16:33.3188070Z   token: ***
+2025-11-02T11:16:33.3188640Z   ssh-strict: true
+2025-11-02T11:16:33.3189220Z   ssh-user: git
+2025-11-02T11:16:33.3189810Z   persist-credentials: true
+2025-11-02T11:16:33.3190480Z   clean: true
+2025-11-02T11:16:33.3191080Z   sparse-checkout-cone-mode: true
+2025-11-02T11:16:33.3191810Z   fetch-depth: 1
+2025-11-02T11:16:33.3192380Z   fetch-tags: false
+2025-11-02T11:16:33.3192980Z   show-progress: true
+2025-11-02T11:16:33.3193570Z   lfs: false
+2025-11-02T11:16:33.3194130Z   submodules: false
+2025-11-02T11:16:33.3194740Z   set-safe-directory: true
+2025-11-02T11:16:33.3195780Z ##[endgroup]
+2025-11-02T11:16:33.5552950Z Syncing repository: Feuer804/ainotizassistent
+2025-11-02T11:16:33.5555450Z ##[group]Getting Git version info
+2025-11-02T11:16:33.5556600Z Working directory is '/Users/runner/work/ainotizassistent/ainotizassistent'
+2025-11-02T11:16:33.5558380Z [command]/usr/local/bin/git version
+2025-11-02T11:16:33.5813690Z git version 2.50.1
+2025-11-02T11:16:33.5847370Z ##[endgroup]
+2025-11-02T11:16:33.5874510Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/dba2434c-234a-4f7e-a1ff-fe8ba83658b9/.gitconfig'
+2025-11-02T11:16:33.5894440Z Temporarily overriding HOME='/Users/runner/work/_temp/dba2434c-234a-4f7e-a1ff-fe8ba83658b9' before making global git config changes
+2025-11-02T11:16:33.5897130Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-02T11:16:33.5900470Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/ainotizassistent/ainotizassistent
+2025-11-02T11:16:33.6018470Z Deleting the contents of '/Users/runner/work/ainotizassistent/ainotizassistent'
+2025-11-02T11:16:33.6026460Z ##[group]Initializing the repository
+2025-11-02T11:16:33.6035760Z [command]/usr/local/bin/git init /Users/runner/work/ainotizassistent/ainotizassistent
+2025-11-02T11:16:33.6314630Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-02T11:16:33.6316550Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-02T11:16:33.6319280Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-02T11:16:33.6321130Z hint:
+2025-11-02T11:16:33.6322510Z hint: 	git config --global init.defaultBranch <name>
+2025-11-02T11:16:33.6323700Z hint:
+2025-11-02T11:16:33.6324780Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-02T11:16:33.6326510Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-02T11:16:33.6327810Z hint:
+2025-11-02T11:16:33.6328540Z hint: 	git branch -m <name>
+2025-11-02T11:16:33.6329340Z hint:
+2025-11-02T11:16:33.6330460Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-02T11:16:33.6332500Z Initialized empty Git repository in /Users/runner/work/ainotizassistent/ainotizassistent/.git/
+2025-11-02T11:16:33.6338570Z [command]/usr/local/bin/git remote add origin https://github.com/Feuer804/ainotizassistent
+2025-11-02T11:16:33.6450570Z ##[endgroup]
+2025-11-02T11:16:33.6452300Z ##[group]Disabling automatic garbage collection
+2025-11-02T11:16:33.6454430Z [command]/usr/local/bin/git config --local gc.auto 0
+2025-11-02T11:16:33.6551240Z ##[endgroup]
+2025-11-02T11:16:33.6552340Z ##[group]Setting up auth
+2025-11-02T11:16:33.6562230Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-02T11:16:33.6655810Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-02T11:16:33.7872310Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-02T11:16:33.7963860Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-02T11:16:34.0686780Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-02T11:16:34.0764430Z ##[endgroup]
+2025-11-02T11:16:34.0779190Z ##[group]Fetching the repository
+2025-11-02T11:16:34.0855400Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7b23acb7514ff23d37245c697acabd2d71bb2b70:refs/remotes/origin/main
+2025-11-02T11:16:35.1089450Z From https://github.com/Feuer804/ainotizassistent
+2025-11-02T11:16:35.1093370Z  * [new ref]         7b23acb7514ff23d37245c697acabd2d71bb2b70 -> origin/main
+2025-11-02T11:16:35.1210170Z ##[endgroup]
+2025-11-02T11:16:35.1213630Z ##[group]Determining the checkout info
+2025-11-02T11:16:35.1248360Z ##[endgroup]
+2025-11-02T11:16:35.1291930Z [command]/usr/local/bin/git sparse-checkout disable
+2025-11-02T11:16:35.1324300Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-02T11:16:35.1381760Z ##[group]Checking out the ref
+2025-11-02T11:16:35.1410640Z [command]/usr/local/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-11-02T11:16:35.2849190Z Switched to a new branch 'main'
+2025-11-02T11:16:35.3852710Z branch 'main' set up to track 'origin/main'.
+2025-11-02T11:16:35.4017260Z ##[endgroup]
+2025-11-02T11:16:35.4046450Z [command]/usr/local/bin/git log -1 --format=%H
+2025-11-02T11:16:35.4049750Z 7b23acb7514ff23d37245c697acabd2d71bb2b70

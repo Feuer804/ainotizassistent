@@ -1,5 +1,5 @@
-2025-11-02T01:29:32.9050000Z Requested labels: macos-13
-2025-11-02T01:29:32.9050000Z Job defined at: Feuer804/ainotizassistent/.github/workflows/build-macos.yml@refs/heads/main
-2025-11-02T01:29:32.9050000Z Waiting for a runner to pick up this job...
-2025-11-02T01:29:33.4030000Z Job is about to start running on the hosted runner: GitHub Actions 1000000028
-2025-11-02T01:29:33.4090000Z Job is waiting for a hosted runner to come online.
+2025-11-02T11:16:18.0510000Z Requested labels: macos-13
+2025-11-02T11:16:18.0510000Z Job defined at: Feuer804/ainotizassistent/.github/workflows/build-macos.yml@refs/heads/main
+2025-11-02T11:16:18.0510000Z Waiting for a runner to pick up this job...
+2025-11-02T11:16:18.5520000Z Job is about to start running on the hosted runner: GitHub Actions 1000000029
+2025-11-02T11:16:18.5520000Z Job is waiting for a hosted runner to come online.
