@@ -1,0 +1,75 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build AI Notizassistent
+    runs-on: macos-13
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+          xcodebuild -version
+      
+      - name: List Project Info
+        run: |
+          cd AINotizassistent
+          echo "=== PROJECT INFORMATION ==="
+          xcodebuild -list -project AINotizassistent.xcodeproj
+      
+      - name: Clean Build
+        run: |
+          cd AINotizassistent
+          xcodebuild clean -project AINotizassistent.xcodeproj -scheme AINotizassistent
+      
+      - name: Build App
+        run: |
+          cd AINotizassistent
+          xcodebuild build \
+            -project AINotizassistent.xcodeproj \
+            -scheme AINotizassistent \
+            -configuration Release \
+            -derivedDataPath ./DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+      
+      - name: Locate Built App
+        run: |
+          cd AINotizassistent
+          echo "=== SEARCHING FOR APP BUNDLE ==="
+          find DerivedData -name "*.app" -type d
+          ls -la DerivedData/Build/Products/Release/
+      
+      - name: Create ZIP Archive
+        run: |
+          cd AINotizassistent/DerivedData/Build/Products/Release
+          if [ -d "AINotizassistent.app" ]; then
+            zip -r ../../../../AINotizassistent.zip AINotizassistent.app
+            echo "ZIP created successfully"
+          else
+            echo "ERROR: App bundle not found"
+            exit 1
+          fi
+      
+      - name: Upload App as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AINotizassistent-macOS
+          path: AINotizassistent/AINotizassistent.zip
+          retention-days: 30
+      
+      - name: Build Summary
+        run: |
+          echo "=== BUILD SUCCESSFUL ==="
+          echo "App size: $(du -h AINotizassistent/AINotizassistent.zip | cut -f1)"
+          echo "Download from: GitHub Actions > Artifacts > AINotizassistent-macOS"

@@ -1,0 +1,276 @@
+﻿2025-11-02T00:50:02.3918500Z Current runner version: '2.329.0'
+2025-11-02T00:50:02.3968420Z ##[group]Runner Image Provisioner
+2025-11-02T00:50:02.3970210Z Hosted Compute Agent
+2025-11-02T00:50:02.3971250Z Version: 20251016.436
+2025-11-02T00:50:02.3972380Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-02T00:50:02.3974260Z Build Date: 2025-10-15T20:44:12Z
+2025-11-02T00:50:02.3975480Z ##[endgroup]
+2025-11-02T00:50:02.3976570Z ##[group]Operating System
+2025-11-02T00:50:02.3977640Z macOS
+2025-11-02T00:50:02.3978810Z 13.7.6
+2025-11-02T00:50:02.3980050Z 22H625
+2025-11-02T00:50:02.3981100Z ##[endgroup]
+2025-11-02T00:50:02.3982000Z ##[group]Runner Image
+2025-11-02T00:50:02.3982950Z Image: macos-13
+2025-11-02T00:50:02.3983840Z Version: 20250908.1476
+2025-11-02T00:50:02.3986010Z Included Software: https://github.com/actions/runner-images/blob/macos-13/20250908.1476/images/macos/macos-13-Readme.md
+2025-11-02T00:50:02.3989670Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-13%2F20250908.1476
+2025-11-02T00:50:02.3991650Z ##[endgroup]
+2025-11-02T00:50:02.3993770Z ##[group]GITHUB_TOKEN Permissions
+2025-11-02T00:50:02.3998140Z Contents: read
+2025-11-02T00:50:02.3999400Z Metadata: read
+2025-11-02T00:50:02.4000220Z Packages: read
+2025-11-02T00:50:02.4000990Z ##[endgroup]
+2025-11-02T00:50:02.4005410Z Secret source: Actions
+2025-11-02T00:50:02.4007810Z Prepare workflow directory
+2025-11-02T00:50:02.4768760Z Prepare all required actions
+2025-11-02T00:50:02.4861970Z Getting action download info
+2025-11-02T00:50:03.1420150Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-11-02T00:50:04.6278940Z Complete job name: Build AI Notizassistent
+2025-11-02T00:50:04.7700660Z ##[group]Run actions/checkout@v4
+2025-11-02T00:50:04.7703190Z with:
+2025-11-02T00:50:04.7703940Z   repository: Feuer804/ainotizassistent
+2025-11-02T00:50:04.7705220Z   token: ***
+2025-11-02T00:50:04.7706280Z   ssh-strict: true
+2025-11-02T00:50:04.7707690Z   ssh-user: git
+2025-11-02T00:50:04.7709090Z   persist-credentials: true
+2025-11-02T00:50:04.7710290Z   clean: true
+2025-11-02T00:50:04.7711030Z   sparse-checkout-cone-mode: true
+2025-11-02T00:50:04.7711870Z   fetch-depth: 1
+2025-11-02T00:50:04.7713070Z   fetch-tags: false
+2025-11-02T00:50:04.7714140Z   show-progress: true
+2025-11-02T00:50:04.7715710Z   lfs: false
+2025-11-02T00:50:04.7717250Z   submodules: false
+2025-11-02T00:50:04.7718500Z   set-safe-directory: true
+2025-11-02T00:50:04.7721200Z ##[endgroup]
+2025-11-02T00:50:05.2555560Z Syncing repository: Feuer804/ainotizassistent
+2025-11-02T00:50:05.2561290Z ##[group]Getting Git version info
+2025-11-02T00:50:05.2564450Z Working directory is '/Users/runner/work/ainotizassistent/ainotizassistent'
+2025-11-02T00:50:05.2569160Z [command]/usr/local/bin/git version
+2025-11-02T00:50:05.3619100Z git version 2.50.1
+2025-11-02T00:50:05.3693290Z ##[endgroup]
+2025-11-02T00:50:05.3715140Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/d1292d52-27e4-48a1-ad92-9cb25c0a0a31/.gitconfig'
+2025-11-02T00:50:05.3821670Z Temporarily overriding HOME='/Users/runner/work/_temp/d1292d52-27e4-48a1-ad92-9cb25c0a0a31' before making global git config changes
+2025-11-02T00:50:05.3826380Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-02T00:50:05.3830860Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/ainotizassistent/ainotizassistent
+2025-11-02T00:50:05.5844070Z Deleting the contents of '/Users/runner/work/ainotizassistent/ainotizassistent'
+2025-11-02T00:50:05.5860100Z ##[group]Initializing the repository
+2025-11-02T00:50:05.5865770Z [command]/usr/local/bin/git init /Users/runner/work/ainotizassistent/ainotizassistent
+2025-11-02T00:50:05.6783770Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-02T00:50:05.6788650Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-02T00:50:05.6794250Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-02T00:50:05.6799380Z hint:
+2025-11-02T00:50:05.6801600Z hint: 	git config --global init.defaultBranch <name>
+2025-11-02T00:50:05.6805640Z hint:
+2025-11-02T00:50:05.6808590Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-02T00:50:05.6813380Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-02T00:50:05.6815970Z hint:
+2025-11-02T00:50:05.6818110Z hint: 	git branch -m <name>
+2025-11-02T00:50:05.6819790Z hint:
+2025-11-02T00:50:05.6822140Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-02T00:50:05.6826410Z Initialized empty Git repository in /Users/runner/work/ainotizassistent/ainotizassistent/.git/
+2025-11-02T00:50:05.6832910Z [command]/usr/local/bin/git remote add origin https://github.com/Feuer804/ainotizassistent
+2025-11-02T00:50:05.6959750Z ##[endgroup]
+2025-11-02T00:50:05.6964310Z ##[group]Disabling automatic garbage collection
+2025-11-02T00:50:05.6968260Z [command]/usr/local/bin/git config --local gc.auto 0
+2025-11-02T00:50:05.7073880Z ##[endgroup]
+2025-11-02T00:50:05.7077040Z ##[group]Setting up auth
+2025-11-02T00:50:05.7087980Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-02T00:50:05.7216500Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-02T00:50:05.9749170Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-02T00:50:05.9855080Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-02T00:50:06.1747500Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-02T00:50:06.1762260Z ##[endgroup]
+2025-11-02T00:50:06.1769050Z ##[group]Fetching the repository
+2025-11-02T00:50:06.1780750Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4512d966205886708368e8583dfb4c65ee5c918c:refs/remotes/origin/main
+2025-11-02T00:50:07.0333600Z From https://github.com/Feuer804/ainotizassistent
+2025-11-02T00:50:07.0340810Z  * [new ref]         4512d966205886708368e8583dfb4c65ee5c918c -> origin/main
+2025-11-02T00:50:07.0472870Z ##[endgroup]
+2025-11-02T00:50:07.0480580Z ##[group]Determining the checkout info
+2025-11-02T00:50:07.0484620Z ##[endgroup]
+2025-11-02T00:50:07.0486830Z [command]/usr/local/bin/git sparse-checkout disable
+2025-11-02T00:50:07.0641750Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-02T00:50:07.0741690Z ##[group]Checking out the ref
+2025-11-02T00:50:07.0747110Z [command]/usr/local/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-11-02T00:50:07.2519710Z Switched to a new branch 'main'
+2025-11-02T00:50:07.2540560Z branch 'main' set up to track 'origin/main'.
+2025-11-02T00:50:07.2554950Z ##[endgroup]
+2025-11-02T00:50:07.2692020Z [command]/usr/local/bin/git log -1 --format=%H
+2025-11-02T00:50:07.2790890Z 4512d966205886708368e8583dfb4c65ee5c918c
+2025-11-02T00:50:07.3201700Z ##[group]Run sudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer
+2025-11-02T00:50:07.3205750Z [36;1msudo xcode-select -s /Applications/Xcode_15.0.app/Contents/Developer[0m
+2025-11-02T00:50:07.3208700Z [36;1mxcodebuild -version[0m
+2025-11-02T00:50:07.3366810Z shell: /bin/bash -e {0}
+2025-11-02T00:50:07.3368490Z ##[endgroup]
+2025-11-02T00:50:17.7840070Z Xcode 15.0.1
+2025-11-02T00:50:17.7846510Z Build version 15A507
+2025-11-02T00:50:17.8017990Z ##[group]Run cd AINotizassistent
+2025-11-02T00:50:17.8019430Z [36;1mcd AINotizassistent[0m
+2025-11-02T00:50:17.8020010Z [36;1mecho "=== XCODEBUILD LIST ==="[0m
+2025-11-02T00:50:17.8021520Z [36;1mxcodebuild -list -project AINotizassistent.xcodeproj[0m
+2025-11-02T00:50:17.8023190Z [36;1mecho ""[0m
+2025-11-02T00:50:17.8023660Z [36;1mecho "=== AVAILABLE SCHEMES ==="[0m
+2025-11-02T00:50:17.8026970Z [36;1mxcodebuild -listSchemes -project AINotizassistent.xcodeproj[0m
+2025-11-02T00:50:18.0102250Z shell: /bin/bash -e {0}
+2025-11-02T00:50:18.0103540Z ##[endgroup]
+2025-11-02T00:50:18.2421000Z === XCODEBUILD LIST ===
+2025-11-02T00:50:20.9453290Z Command line invocation:
+2025-11-02T00:50:20.9458570Z     /Applications/Xcode_15.0.1.app/Contents/Developer/usr/bin/xcodebuild -list -project AINotizassistent.xcodeproj
+2025-11-02T00:50:20.9472290Z 
+2025-11-02T00:50:20.9477390Z User defaults from command line:
+2025-11-02T00:50:20.9479920Z     IDEPackageSupportUseBuiltinSCM = YES
+2025-11-02T00:50:20.9483610Z 
+2025-11-02T00:50:28.1936590Z Information about project "AINotizassistent":
+2025-11-02T00:50:28.1997550Z     Targets:
+2025-11-02T00:50:28.2025320Z         AINotizassistent
+2025-11-02T00:50:28.2036490Z 
+2025-11-02T00:50:28.2041360Z     Build Configurations:
+2025-11-02T00:50:28.2045790Z         Debug
+2025-11-02T00:50:28.2115280Z         Release
+2025-11-02T00:50:28.2129280Z 
+2025-11-02T00:50:28.2133830Z     If no build configuration is specified and -scheme is not passed then "Release" is used.
+2025-11-02T00:50:28.2144650Z 
+2025-11-02T00:50:28.2152350Z     Schemes:
+2025-11-02T00:50:28.2187980Z         AINotizassistent
+2025-11-02T00:50:28.2193370Z 
+2025-11-02T00:50:28.2225840Z 
+2025-11-02T00:50:28.2286950Z === AVAILABLE SCHEMES ===
+2025-11-02T00:50:28.6441030Z 2025-11-02 00:50:28.568 xcodebuild[13533:41180] Writing error result bundle to /var/folders/vk/nx37ffx50hv5djclhltc26vw0000gn/T/ResultBundle_2025-02-11_00-50-0028.xcresult
+2025-11-02T00:50:28.7205770Z 2025-11-02 00:50:28.718 xcodebuild[13533:41180] Requested but did not find extension point with identifier Xcode.IDEFoundation.IDEResultKitSerializationConverter
+2025-11-02T00:50:28.8630740Z xcodebuild: error: invalid option '-listSchemes'
+2025-11-02T00:50:28.8642600Z 
+2025-11-02T00:50:28.8714870Z Usage: xcodebuild [-project <projectname>] [[-target <targetname>]...|-alltargets] [-configuration <configurationname>] [-arch <architecture>]... [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings [-json]] [<buildsetting>=<value>]... [<buildaction>]...
+2025-11-02T00:50:28.8733140Z        xcodebuild [-project <projectname>] -scheme <schemeName> [-destination <destinationspecifier>]... [-configuration <configurationname>] [-arch <architecture>]... [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings [-json]] [-showdestinations] [<buildsetting>=<value>]... [<buildaction>]...
+2025-11-02T00:50:28.8743610Z        xcodebuild -workspace <workspacename> -scheme <schemeName> [-destination <destinationspecifier>]... [-configuration <configurationname>] [-arch <architecture>]... [-sdk [<sdkname>|<sdkpath>]] [-showBuildSettings] [-showdestinations] [<buildsetting>=<value>]... [<buildaction>]...
+2025-11-02T00:50:28.8750970Z        xcodebuild -version [-sdk [<sdkfullpath>|<sdkname>] [-json] [<infoitem>] ]
+2025-11-02T00:50:28.8753460Z        xcodebuild -list [[-project <projectname>]|[-workspace <workspacename>]] [-json]
+2025-11-02T00:50:28.8765400Z        xcodebuild -showsdks [-json]
+2025-11-02T00:50:28.8778390Z        xcodebuild -exportArchive -archivePath <xcarchivepath> [-exportPath <destinationpath>] -exportOptionsPlist <plistpath>
+2025-11-02T00:50:28.8783770Z        xcodebuild -exportNotarizedApp -archivePath <xcarchivepath> -exportPath <destinationpath>
+2025-11-02T00:50:28.8796280Z        xcodebuild -exportLocalizations -localizationPath <path> -project <projectname> [-defaultLanguage <language>] [-exportLanguage <targetlanguage>... [-includeScreenshots]]
+2025-11-02T00:50:28.8810040Z        xcodebuild -importLocalizations -localizationPath <path> -project <projectname> [-mergeImport]
+2025-11-02T00:50:28.8820750Z        xcodebuild -resolvePackageDependencies [-project <projectname>|-workspace <workspacename>] -clonedSourcePackagesDirPath <path>
+2025-11-02T00:50:28.8840350Z        xcodebuild -create-xcframework [-help] [-framework <path>] [-library <path> [-headers <path>]] -output <path>
+2025-11-02T00:50:28.8846250Z 
+2025-11-02T00:50:28.8850120Z Options:
+2025-11-02T00:50:28.8852490Z     -usage                                                   print brief usage
+2025-11-02T00:50:28.8855230Z     -help                                                    print complete usage
+2025-11-02T00:50:28.8923170Z     -verbose                                                 provide additional status output
+2025-11-02T00:50:28.8934150Z     -license                                                 show the Xcode and SDK license agreements
+2025-11-02T00:50:28.8940770Z     -checkFirstLaunchStatus                                  Check if any First Launch tasks need to be performed
+2025-11-02T00:50:28.8952850Z     -runFirstLaunch                                          install packages and agree to the license
+2025-11-02T00:50:28.8956910Z     -downloadAllPlatforms                                    download all platforms
+2025-11-02T00:50:28.8967390Z     -downloadPlatform NAME                                   download the platform NAME
+2025-11-02T00:50:28.8970390Z     -downloadAllPreviouslySelectedPlatforms                  download all previously selected platforms
+2025-11-02T00:50:28.8973390Z     -project NAME                                            build the project NAME
+2025-11-02T00:50:28.8975440Z     -target NAME                                             build the target NAME
+2025-11-02T00:50:28.8985190Z     -alltargets                                              build all targets
+2025-11-02T00:50:28.8990260Z     -workspace NAME                                          build the workspace NAME
+2025-11-02T00:50:28.9014510Z     -scheme NAME                                             build the scheme NAME
+2025-11-02T00:50:28.9022050Z     -configuration NAME                                      use the build configuration NAME for building each target
+2025-11-02T00:50:28.9031430Z     -xcconfig PATH                                           apply the build settings defined in the file at PATH as overrides
+2025-11-02T00:50:28.9036200Z     -arch ARCH                                               build each target for the architecture ARCH; this will override architectures defined in the project
+2025-11-02T00:50:28.9042370Z     -sdk SDK                                                 use SDK as the name or path of the base SDK when building the project
+2025-11-02T00:50:28.9073390Z     -toolchain NAME                                          use the toolchain with identifier or name NAME
+2025-11-02T00:50:28.9092420Z     -destination DESTINATIONSPECIFIER                        use the destination described by DESTINATIONSPECIFIER (a comma-separated set of key=value pairs describing the destination to use)
+2025-11-02T00:50:28.9097970Z     -destination-timeout TIMEOUT                             wait for TIMEOUT seconds while searching for the destination device
+2025-11-02T00:50:28.9101100Z     -parallelizeTargets                                      build independent targets in parallel
+2025-11-02T00:50:28.9103400Z     -jobs NUMBER                                             specify the maximum number of concurrent build operations
+2025-11-02T00:50:28.9107370Z     -maximum-concurrent-test-device-destinations NUMBER      the maximum number of device destinations to test on concurrently
+2025-11-02T00:50:28.9120180Z     -maximum-concurrent-test-simulator-destinations NUMBER   the maximum number of simulator destinations to test on concurrently
+2025-11-02T00:50:28.9123190Z     -parallel-testing-enabled YES|NO                         overrides the per-target setting in the scheme
+2025-11-02T00:50:28.9129180Z     -parallel-testing-worker-count NUMBER                    the exact number of test runners that will be spawned during parallel testing
+2025-11-02T00:50:28.9137770Z     -maximum-parallel-testing-workers NUMBER                 the maximum number of test runners that will be spawned during parallel testing
+2025-11-02T00:50:28.9150260Z     -dry-run                                                 do everything except actually running the commands
+2025-11-02T00:50:28.9159360Z     -quiet                                                   do not print any output except for warnings and errors
+2025-11-02T00:50:28.9161810Z     -hideShellScriptEnvironment                              don't show shell script environment variables in build log
+2025-11-02T00:50:28.9164820Z     -showsdks                                                display a compact list of the installed SDKs
+2025-11-02T00:50:28.9176670Z     -showdestinations                                        display a list of destinations
+2025-11-02T00:50:28.9179140Z     -showTestPlans                                           display a list of test plans
+2025-11-02T00:50:28.9181220Z     -showBuildSettings                                       display a list of build settings and values
+2025-11-02T00:50:28.9195390Z     -showBuildSettingsForIndex                               display build settings for the index service
+2025-11-02T00:50:28.9199100Z     -list                                                    lists the targets and configurations in a project, or the schemes in a workspace
+2025-11-02T00:50:28.9201760Z     -find-executable NAME                                    display the full path to executable NAME in the provided SDK and toolchain
+2025-11-02T00:50:28.9204070Z     -find-library NAME                                       display the full path to library NAME in the provided SDK and toolchain
+2025-11-02T00:50:28.9206120Z     -version                                                 display the version of Xcode; with -sdk will display info about one or all installed SDKs
+2025-11-02T00:50:28.9207990Z     -enableAddressSanitizer YES|NO                           turn the address sanitizer on or off
+2025-11-02T00:50:28.9209430Z     -enableThreadSanitizer YES|NO                            turn the thread sanitizer on or off
+2025-11-02T00:50:28.9210900Z     -enableUndefinedBehaviorSanitizer YES|NO                 turn the undefined behavior sanitizer on or off
+2025-11-02T00:50:28.9212650Z     -resultBundlePath PATH                                   specifies the directory where a result bundle describing what occurred will be placed
+2025-11-02T00:50:28.9214400Z     -resultStreamPath PATH                                   specifies the file where a result stream will be written to (the file must already exist)
+2025-11-02T00:50:28.9215920Z     -resultBundleVersion 3 [default]                         specifies which result bundle version should be used
+2025-11-02T00:50:28.9217620Z     -clonedSourcePackagesDirPath PATH                        specifies the directory to which remote source packages are fetch or expected to be found
+2025-11-02T00:50:28.9219390Z     -derivedDataPath PATH                                    specifies the directory where build products and other derived data will go
+2025-11-02T00:50:28.9221180Z     -archivePath PATH                                        specifies the directory where any created archives will be placed, or the archive that should be exported
+2025-11-02T00:50:28.9222730Z     -exportArchive                                           specifies that an archive should be exported
+2025-11-02T00:50:28.9223800Z     -exportNotarizedApp                                      export an archive that has been notarized by Apple
+2025-11-02T00:50:28.9225360Z     -exportOptionsPlist PATH                                 specifies a path to a plist file that configures archive exporting
+2025-11-02T00:50:28.9226790Z     -enableCodeCoverage YES|NO                               turn code coverage on or off when testing
+2025-11-02T00:50:28.9228590Z     -exportPath PATH                                         specifies the destination for the product exported from an archive
+2025-11-02T00:50:28.9230450Z     -skipUnavailableActions                                  specifies that scheme actions that cannot be performed should be skipped instead of causing a failure
+2025-11-02T00:50:28.9232120Z     -exportLocalizations                                     exports completed and outstanding project localizations
+2025-11-02T00:50:28.9234280Z     -importLocalizations                                     imports localizations for a project, assuming any necessary localized resources have been created in Xcode
+2025-11-02T00:50:28.9235920Z     -localizationPath                                        specifies a path to XLIFF localization files
+2025-11-02T00:50:28.9237240Z     -exportLanguage                                          specifies multiple optional ISO 639-1 languages included in a localization export
+2025-11-02T00:50:28.9238810Z     -defaultLanguage                                         specifies the default ISO 639-1 language to be used as the source language on export
+2025-11-02T00:50:28.9240070Z     -xctestrun                                               specifies a path to a test run specification
+2025-11-02T00:50:28.9241090Z     -testProductsPath                                        specifies a path for the test products
+2025-11-02T00:50:28.9242940Z     -enablePerformanceTestsDiagnostics YES|NO                enables performance trace and memgraph collection for performance XCTests
+2025-11-02T00:50:28.9244660Z     -testPlan                                                specifies the name of the test plan associated with the scheme to use for testing
+2025-11-02T00:50:28.9246080Z     -only-testing                                            constrains testing by specifying tests to include, and excluding other tests
+2025-11-02T00:50:28.9247920Z     -only-testing:TEST-IDENTIFIER                            constrains testing by specifying tests to include, and excluding other tests
+2025-11-02T00:50:28.9249620Z     -skip-testing                                            constrains testing by specifying tests to exclude, but including other tests
+2025-11-02T00:50:28.9251300Z     -skip-testing:TEST-IDENTIFIER                            constrains testing by specifying tests to exclude, but including other tests
+2025-11-02T00:50:28.9252880Z     -test-timeouts-enabled YES|NO                            enable or disable test timeout behavior
+2025-11-02T00:50:28.9254770Z     -default-test-execution-time-allowance SECONDS           the default execution time an individual test is given to execute, if test timeouts are enabled
+2025-11-02T00:50:28.9258490Z     -maximum-test-execution-time-allowance SECONDS           the maximum execution time an individual test is given to execute, regardless of the test's preferred allowance
+2025-11-02T00:50:28.9261430Z     -test-iterations <number>                                If specified, tests will run <number> times. May be used in conjunction with either -retry-tests-on-failure or -run-tests-until-failure, in which case this will become the maximum number of iterations.
+2025-11-02T00:50:28.9265110Z     -retry-tests-on-failure                                  If specified, tests will retry on failure. May be used in conjunction with -test-iterations <number>, in which case <number> will be the maximum number of iterations. Otherwise, a maximum of 3 is assumed. May not be used with -run-tests-until-failure.
+2025-11-02T00:50:28.9269100Z     -run-tests-until-failure                                 If specified, tests will run until they fail. May be used in conjunction with -test-iterations <number>, in which case <number> will be the maximum number of iterations. Otherwise, a maximum of 100 is assumed. May not be used with -retry-tests-on-failure.
+2025-11-02T00:50:28.9273870Z     -test-repetition-relaunch-enabled YES|NO                 Enable or disable, tests repeating in a new process for each repetition.  Must be used in conjunction with -test-iterations, -retry-tests-on-failure, or -run-tests-until-failure. If not specified, tests will repeat in the same process.
+2025-11-02T00:50:28.9277020Z     -only-test-configuration                                 constrains testing by specifying test configurations to include, and excluding other test configurations
+2025-11-02T00:50:28.9279270Z     -skip-test-configuration                                 constrains testing by specifying test configurations to exclude, but including other test configurations
+2025-11-02T00:50:28.9282130Z     -collect-test-diagnostics on-failure|never               Whether or not testing collects verbose diagnostics (like a sysdiagnose) when encountering a failure
+2025-11-02T00:50:28.9284000Z     -testLanguage                                            constrains testing by specifying ISO 639-1 language in which to run the tests
+2025-11-02T00:50:28.9285570Z     -testRegion                                              constrains testing by specifying ISO 3166-1 region in which to run the tests
+2025-11-02T00:50:28.9287090Z     -enumerate-tests                                         Enumerate the tests that would be executed by this command without actually executing them
+2025-11-02T00:50:28.9288590Z     -test-enumeration-style                                  The style in which to enumerate the tests. Valid styles: flat, hierarchical
+2025-11-02T00:50:28.9290030Z     -test-enumeration-format                                 The output format of the enumerated tests. Valid formats: text, json
+2025-11-02T00:50:28.9292020Z     -test-enumeration-output-path                            The path (relative or absolute) where the results of test enumeration should be written. If '-' is supplied, writes to standard out.
+2025-11-02T00:50:28.9294230Z     -resolvePackageDependencies                              resolves any Swift package dependencies referenced by the project or workspace
+2025-11-02T00:50:28.9296570Z     -disableAutomaticPackageResolution                       prevents packages from automatically being resolved to versions other than those recorded in the `Package.resolved` file
+2025-11-02T00:50:28.9299250Z     -onlyUsePackageVersionsFromResolvedFile                  prevents packages from automatically being resolved to versions other than those recorded in the `Package.resolved` file
+2025-11-02T00:50:28.9301310Z     -skipPackageUpdates                                      Skip updating package dependencies from their remote
+2025-11-02T00:50:28.9302810Z     -disablePackageRepositoryCache                           disable use of a local cache of remote package repositories
+2025-11-02T00:50:28.9304630Z     -skipPackagePluginValidation                             Skip validation of package plugins (this can be a security risk if they are not from trusted sources)
+2025-11-02T00:50:28.9306480Z     -skipMacroValidation                                     Skip validation of macros (this can be a security risk if they are not from trusted sources)
+2025-11-02T00:50:28.9307860Z     -packageCachePath                                        path of caches used for package support
+2025-11-02T00:50:28.9308950Z     -defaultPackageRegistryURL                               URL of the default package registry
+2025-11-02T00:50:28.9311200Z     -packageDependencySCMToRegistryTransformation            specifies the transformation to apply to SCM-based package dependencies (none, useRegistryIdentity, or useRegistryIdentityAndSources)
+2025-11-02T00:50:28.9313860Z     -skipPackageSignatureValidation                          Skip validation of package signatures (this can be a security risk if they are not from trusted sources)
+2025-11-02T00:50:28.9315630Z     -packageFingerprintPolicy                                Package fingerprint checking policy (`warn` or `strict`)
+2025-11-02T00:50:28.9317090Z     -packageSigningEntityPolicy                              Package signing entity checking policy (`warn` or `strict`)
+2025-11-02T00:50:28.9318300Z     -json                                                    output as JSON (note: -json implies -quiet)
+2025-11-02T00:50:28.9323400Z     -allowProvisioningUpdates                                Allow xcodebuild to communicate with the Apple Developer website. For automatically signed targets, xcodebuild will create and update profiles, app IDs, and certificates. For manually signed targets, xcodebuild will download missing or updated provisioning profiles. Requires a developer account to have been added in Xcode's Accounts settings or an App Store Connect authentication key to be specified via the -authenticationKeyPath, -authenticationKeyID, and -authenticationKeyIssuerID parameters.
+2025-11-02T00:50:28.9329560Z     -allowProvisioningDeviceRegistration                     Allow xcodebuild to register your destination device on the developer portal if necessary. This flag only takes effect if -allowProvisioningUpdates is also passed.
+2025-11-02T00:50:28.9333410Z     -authenticationKeyPath                                   specifies the path to an authentication key issued by App Store Connect. If specified, xcodebuild will authenticate with the Apple Developer website using this credential. The -authenticationKeyID and -authenticationKeyIssuerID parameters are required.
+2025-11-02T00:50:28.9337630Z     -authenticationKeyID                                     specifies the key identifier associated with the App Store Conect authentication key at -authenticationKeyPath. This string can be located in the users and access details for your provider at "https://appstoreconnect.apple.com".
+2025-11-02T00:50:28.9341710Z     -authenticationKeyIssuerID                               specifies the App Store Connect issuer identifier associated with the authentication key at -authenticationKeyPath. This string can be located in the users and access details for your provider at "https://appstoreconnect.apple.com".
+2025-11-02T00:50:28.9344420Z     -scmProvider                                             which implementation to use for Git operations (system/xcode)
+2025-11-02T00:50:28.9345820Z     -showBuildTimingSummary                                  display a report of the timings of all the commands invoked during the build
+2025-11-02T00:50:28.9347350Z     -create-xcframework                                      create an xcframework from prebuilt libraries; -help for more information.
+2025-11-02T00:50:28.9364320Z ##[error]Process completed with exit code 64.
+2025-11-02T00:50:28.9607950Z Post job cleanup.
+2025-11-02T00:50:29.3749280Z [command]/usr/local/bin/git version
+2025-11-02T00:50:29.3764380Z git version 2.50.1
+2025-11-02T00:50:29.3954190Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/864fe641-015a-43fd-8af7-eef2879f9063/.gitconfig'
+2025-11-02T00:50:29.3965900Z Temporarily overriding HOME='/Users/runner/work/_temp/864fe641-015a-43fd-8af7-eef2879f9063' before making global git config changes
+2025-11-02T00:50:29.3979430Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-02T00:50:29.4003810Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/ainotizassistent/ainotizassistent
+2025-11-02T00:50:29.4046840Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-02T00:50:29.4105830Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-02T00:50:29.5484060Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-02T00:50:29.5556070Z http.https://github.com/.extraheader
+2025-11-02T00:50:29.5579840Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-11-02T00:50:29.5691640Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-02T00:50:29.7348810Z Cleaning up orphan processes
